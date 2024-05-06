@@ -40,6 +40,17 @@ nav ul li a {
     text-decoration: none;
 }
 
+.hbns{
+ background-color: #f5f5f5;   
+ border-radius: 10px ;
+}
+
+.hbns > a  {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+
 /* Estilos de la sección "Acerca de nosotros" */
 .about-us {
     display: flex;
