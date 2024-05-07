@@ -71,28 +71,28 @@ nav ul li a:hover {
 }
 
 /* Estilos de la sección "Acerca de nosotros" */
-.about-us {
+.acerca-nosotros {
     display: flex;
     align-items: center;
     padding: 50px;
     border-bottom: 2px solid #000101; 
 }
 
-.about-us .text {
+.acerca-nosotros .texto {
     flex: 1;
     padding-right: 50px;
 }
 
-.about-us .text h2 {
+.acerca-nosotros .text h2 {
     color: #000101;
 }
 
-.about-us .image {
+.acerca-nosotros .image {
     flex: 1;
     
 }
 
-.about-us .image img {
+.acerca-nosotros .image img {
     width: 100%;
     height: auto;
     border: 2px solid black; 
@@ -105,15 +105,27 @@ nav ul li a:hover {
 .mision-vision {
     display: flex;
     padding: 50px;
-    margin-top: 50px; 
     margin: 50px;
 }
 
-.mision-vision .mision,
-.mision-vision .vision {
+.mision, .vision {
     flex: 1;
     text-align: center;
+    margin: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
+
+.mision p, .vision p{
+    text-align: justify;
+    padding: 20px;
+}
+
+.mision h2, .vision h2{
+    padding-top: 10px;
+}
+
 
 /* Estilos para la sección de Imagen Estática */
 .imagen-estatica {
