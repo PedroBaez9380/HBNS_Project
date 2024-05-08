@@ -70,9 +70,42 @@ nav ul li a:hover {
 }
 
 /* Estilos para el pie de página */
+
 footer {
     background-color: #000101;
     color: #fefeff;
     padding: 20px;
-    text-align: center;
+    text-align: center; 
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.informacion-contacto {
+    display: flex;
+}
+
+.subicono-footer-redes {
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.informacion-contacto p{
+    padding: 0px 20px 0px 20px;
+    width: 50%;
+}
+
+.informacion-contacto, .informacion-contacto p, .subicono-footer-redes {
+    margin: 8px;
+    justify-content: center;
+    
+}
+
+footer .footer-contacto, footer .footer-redes{
+    width: 50%;
+    padding-top: 20px;
+    border: 2px solid #fefeff; 
+    align-content: center;
 }
