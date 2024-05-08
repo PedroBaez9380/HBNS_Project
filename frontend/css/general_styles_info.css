@@ -17,38 +17,46 @@ body {
 /* Estilos de la barra de navegación */
 nav {
     background-color: #fe01ba;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    color: #fefeff;
 }
 
 nav .logo img {
     height: 50px;
     margin: 0;
     padding: 0;
+    border-radius: 10px;
 }
 
-nav ul {
-    list-style: none;
+#navbarNav ul {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
 }
 
-nav ul li {
-    margin-right: 20px;
+#navbarNav ul li {
+    text-align: center;
+    width: 100px;
 }
 
-nav ul li a {
-    color:  #fefeff;
-    text-decoration: none;
-    font-size: 25px;
-    transition: 1s ease;
+
+#nav-quejas {
+    width: 230px;
 }
 
-nav ul li a:hover {
-    color: black;
-    letter-spacing: 1px;
+#nav-inicio {
+    padding-left: 35px;
+}
+
+#nav-inicio, #nav-servicios, #nav-galeria, #nav-recursos, #nav-quejas {
+    font-family: Poppins;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+#nav-inicio:hover, #nav-servicios:hover, #nav-galeria:hover, #nav-recursos:hover, #nav-quejas:hover {
+    color: #fefeff;
+    letter-spacing: 0.5px;
+    transition: color 1s ease, letter-spacing 1s ease;
 }
 
 .hbns{
@@ -62,11 +70,12 @@ nav ul li a:hover {
     font-size: 25px;
     padding: 10px;
     transition: 1s ease;
+    font-family: Poppins;
 }
 
 .hbns > a:hover {
     color: #fe01ba;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* Estilos para el pie de página */
