@@ -79,12 +79,16 @@
 .contacto-inicio, .mapa{
     width: 30%;
     border: 2px solid black; 
+    height: 455px;
+}
+
+.contacto-inicio {
+    align-content: center;
 }
 
 .icono1 {
     height: 90px;
     width: 90px;
-    
 }
 
 #icono-fila1, #icono-fila2{
@@ -92,6 +96,7 @@
     justify-content: center;
     align-items: center;
     margin: 60px;
+
 }
 
 #icono-fila1 > div, #icono-fila2 > div{
@@ -103,6 +108,8 @@
     width: 50%;
 
 }
+
+
 
 /* Subiconos para seccion de contacto*/
 
