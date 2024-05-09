@@ -90,8 +90,18 @@ footer {
     padding: 0;
 }
 
-.informacion-contacto {
+.informacion-contacto .row {
     display: flex;
+}
+
+.informacion-contacto  p{
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+.informacion-contacto .row, .informacion-contacto .row p, .subicono-footer-redes {
+    margin: 8px;
+    justify-content: center;
 }
 
 .subicono-footer-redes {
@@ -99,17 +109,6 @@ footer {
     width: 35px;
     background-color: white;
     border-radius: 20px;
-}
-
-.informacion-contacto p{
-    padding: 0px 20px 0px 20px;
-    width: 50%;
-}
-
-.informacion-contacto, .informacion-contacto p, .subicono-footer-redes {
-    margin: 8px;
-    justify-content: center;
-    
 }
 
 footer .footer-contacto, footer .footer-redes{

@@ -70,16 +70,24 @@
 
 
 /* Estilos para la sección de Contacto */
-.contacto {
+.contacto{
     display: flex;
     justify-content: center;
     margin: 100px;
 }
 
+.contacto .container .row .col-md-6{
+    padding: 0;
+}
+
 .contacto-inicio, .mapa{
     width: 30%;
     border: 2px solid black; 
-    height: 455px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
 }
 
 .contacto-inicio {
@@ -108,8 +116,6 @@
     width: 50%;
 
 }
-
-
 
 /* Subiconos para seccion de contacto*/
 
