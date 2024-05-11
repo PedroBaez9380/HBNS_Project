@@ -2,5 +2,57 @@
 
 .titulo-clases{
     text-align: center;
-    margin-top: 50px;
+    margin: 50px 0px 100px 0px;
 }
+
+.imagenes-clases img {
+    width: 250px;
+    height: 200px;   
+    border-radius: 200px; 
+}
+
+.imagenes-clases .imagenes-clases-fila .col-sm-12, .imagenes-clases .imagenes-clases-fila .col-sm-12 .img, .imagenes-clases .imagenes-clases-fila .col-sm-12 .h2 {
+    align-items: center;
+    text-align: center;
+    
+}
+
+.imagenes-clases-fila .col-sm-12 {
+    margin-bottom: 75px; 
+}
+
+/* Estilos de texto agendar clase */
+
+.texto-agendar-clase {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 100px;
+    
+}
+
+.texto-agendar-clase h1, .texto-agendar-clase a {
+    font-size: 50px;
+    /* margin: 10px; */
+    line-height: 1.5;
+    text-decoration: none;
+}
+
+/* Estilos de consultar horarios */
+
+.texto-consultar-horarios {
+    margin-bottom: 25px;
+}
+
+#horarios > div {
+    margin: 10px;
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#horarios > div > p {
+    text-align: center;
+    margin: 0;
+}
+
