@@ -14,9 +14,14 @@ body {
     background-size: cover;
 }
 
+body a {
+    text-decoration: none;
+}
+
 /* Estilos de la barra de navegación */
 nav {
     background-color: #fe01ba;
+    margin-bottom: 50px;
 }
 
 nav .logo img {

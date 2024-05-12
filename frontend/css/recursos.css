@@ -1,0 +1,24 @@
+/* Estilos de recursos */
+.cuadro-recurso {
+    border: 2px solid black; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.recurso-imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.cuadro-recurso img {
+    height: 400px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.recurso-texto > a, .recurso-texto > h5, .recurso-texto > p {
+    margin: 10px;
+}
+
