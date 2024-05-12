@@ -7,11 +7,11 @@
 }
 
 body {
-    background-image: url(../images/fondo_index.jpg);
+    background-image: url(../images/fondo.jpg);
     background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Estilos de la barra de navegación */

@@ -61,7 +61,7 @@
 
 /* Estilos para la Imagen Estática */
 .imagen-estatica {
-        background-image:url(../images/hbn_imagen_estatic.jpg);
+        background-image:url(../images/index/hbn_imagen_estatica.jpg);
         padding:100px;
         height: 300px;
         background-attachment: fixed;
