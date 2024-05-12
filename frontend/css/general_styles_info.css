@@ -118,3 +118,7 @@ footer .footer-contacto, footer .footer-redes{
     border: 2px solid #fefeff; 
     align-content: center;
 }
+
+.footer-redes a{
+    text-decoration: none;
+}
