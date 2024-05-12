@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas y sugerencias</title>
+    <link rel="stylesheet" href="../css/general_styles_info.css">
+    <link rel="stylesheet" href="../css/quejas-sugerencias.css">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <!-- Barra navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="../images/HBN_Logo.jpg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-inicio" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-servicios" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-galeria" href="galeria.html">Galería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-recursos" href="recursos.html">Recursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link quejas" id="nav-quejas" href="#">Quejas o sugerencias</a>
+                </li>
+                </ul>
+            </div>
+            <div class="hbns">
+                <a href="#"> Ir a HBNS</a>
+            </div>
+        </div>
+      </nav>
+    <!-- Fin de barra navegacion -->
+
+    <section class="form-quejas-sugerencias">
+        <form class="m-5">
+            <div class="m-5 justify-content-center text-center">
+              <h2 class="mb-3">¿Tienes alguna queja o sugerencia?</h2>
+              <h2>¡Te escuchamos!</h2>
+            </div>
+
+            <div class="mt-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="queja">
+                  <label class="form-check-label" for="checkbox1">Queja</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="sugerencia">
+                  <label class="form-check-label" for="checkbox2">Sugerencia</label>
+                </div>
+            </div>
+
+            <div class="mt-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre (opcional en caso de requerir seguimiento)">
+            </div>
+            
+            <div class="mt-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="Correo Electrónico (opcional en caso de requerir seguimiento)">
+            </div>
+            
+            <div class="mt-3">
+              <label class="form-check-label">Descripción</label>
+              <textarea class="form-control" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+          </form>
+          
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-contacto">
+            <h1>Contacto</h1>
+            <div class="informacion-contacto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>123456789</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>info@dominio.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div class="footer-redes">
+            <h1>Redes</h1>
+            <div>
+                <a href="https://www.facebook.com/hbn.dancecenter"> <img src="../images/iconos/icon_facebook.png" alt="Facebook" class="subicono-footer-redes"> </a>
+                <a href=""> <img src="../images/iconos/icon_whatsapp.png" alt="Whatsapp" class="subicono-footer-redes"> </a>
+                <a href="https://www.instagram.com/hbndancecenter/"> <img src="../images/iconos/icon_instagram.png" alt="Instagram" class="subicono-footer-redes"> </a>
+                <a href=""><img src="../images/iconos/icon_twitter.png" alt="Twitter" class="subicono-footer-redes"> </a>
+            </div> 
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
