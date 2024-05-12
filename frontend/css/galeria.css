@@ -1,0 +1,24 @@
+.bloque{ 
+    height: 750;
+    display: flex;
+}
+
+.bloque > div {
+    width: 50%;
+}
+
+.bloque img {
+    width: 100%; 
+    height: 100%; 
+}
+
+.bloque .descripcion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del footer para que no haya espacio entre las fotos y footer */
+#footer {
+    margin: 0px;
+}
