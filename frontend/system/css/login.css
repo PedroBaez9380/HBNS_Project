@@ -1,0 +1,39 @@
+.Diseno-login {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.contenedor-login {
+    width: 550px;
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.imagen-logo {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.imagen-logo > img {
+    width: 280px;
+    height: fit-content;
+    border: 2px solid #fe01ba;
+    border-radius: 10px; 
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-login > .campo-login {
+    width: 300px;
+}
+
+#texto-usuario, #texto-contrasena {
+    font-size: 30px;
+}
