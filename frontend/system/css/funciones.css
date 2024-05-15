@@ -14,3 +14,11 @@
 .imagen-funcion {
     margin-right: 10px;
 }
+
+
+/* Estilos responsivos */
+@media (max-width: 575.98px) {
+    .texto-funcion {
+      justify-content: center;
+    }
+}
