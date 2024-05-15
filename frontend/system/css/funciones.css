@@ -1,8 +1,16 @@
-.contenedor-banner {
-    height: 200px;
-    width: 100%;
-    background-image: url(../images/HBN_banner.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.contenedor-funciones img {
+    height: 100px;
+    
+}
+
+.contenedor-funciones a {
+    font-size: 30px;
+}
+
+.contenedor-funciones .row {
+    margin-bottom: 30px;
+}
+
+.imagen-funcion {
+    margin-right: 10px;
 }

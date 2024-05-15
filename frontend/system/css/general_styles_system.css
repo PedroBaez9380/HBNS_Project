@@ -1,0 +1,16 @@
+body {
+    background-image: url(../images/fondo.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor-banner {
+    height: 200px;
+    width: 100%;
+    background-image: url(../images/HBN_banner.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
