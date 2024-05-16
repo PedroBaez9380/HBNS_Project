@@ -1,0 +1,35 @@
+.seccion-horario {
+    text-align: center;
+}
+
+.seccion-horario table {
+    margin: 0 auto; 
+    border-collapse: separate;
+    border-spacing: 10px;
+    
+}
+
+/* .seccion-horario th, 
+.seccion-horario td {
+    padding: 8px;
+    border: 1px solid #ddd;
+} */
+
+ 
+.horario th, .horario .hora {
+    border: 1px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 150px;
+}
+
+td {
+    border: 1px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+  
+  
+  
