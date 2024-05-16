@@ -1,0 +1,86 @@
+.chat-usuarios, .chat-mensajes {
+    border: 1px solid black; 
+    border-radius: 2px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+}
+
+.chat-usuarios input{
+    width: 100%;
+}
+
+#usuarios-traer p {
+    margin: 10px 0px 10px 0px;
+    padding-left: 10px;
+}
+
+#usuario-actual {
+    text-align: center;
+}
+
+#usuario-actual, #todos-mensajes {
+    border: 1px solid black; 
+    border-radius: 2px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Estilos solo para mensajes */
+
+#usuario-actual {
+    display: flex;
+
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.chat-mensajes {
+    display: flex;
+    flex-direction: column;
+}
+
+.mensaje-receptor, .mensaje-emisor {
+    width: 100%;
+    max-width: fit-content;
+    padding: 8px 12px;
+    margin-bottom: 5px;
+    border-radius: 16px;
+}
+
+.mensaje-receptor {
+    background-color: #DCF1FF;
+    margin: 20px auto 20px 20px;
+    max-width: 500px;
+}
+
+.mensaje-emisor {
+    width: 758px;
+    background-color: #DCF8C6; 
+    margin: 20px 20px 20px auto;
+    max-width: 500px;
+}
+
+#todos-mensajes {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.hora-fecha {
+    text-align: end;
+    color: #999; 
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Estilos para escribir mensajes */
+
+#area-escribir-mensaje {
+    display: flex;
+}
+
+#area-escribir-mensaje img {
+    width: 50px;
+    height: 50px;
+}
