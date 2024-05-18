@@ -1,0 +1,28 @@
+.creacion-clase { 
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.botones-clase button {
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.abreviatura textarea, .descripcion textarea {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.tabla-clase {
+    overflow-y: auto;
+    max-height: 300px;
+    width: 500px;
+}
+
+.tabla-clase table {
+    margin: 0;
+    padding: 0;
+}
