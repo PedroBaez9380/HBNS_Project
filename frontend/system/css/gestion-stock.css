@@ -1,11 +1,11 @@
-.articulo-compra, .tabla-articulos, .listado-articulos-agregados {
+.articulo-modificar-stock, .tabla-articulos{
     border: 2px solid black; 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 
-.articulo-compra textarea {
+.articulo-modificar-stock textarea {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -17,21 +17,37 @@
     justify-content: space-between
 }
 
-.precio-cantidad {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 60% 30%;
-    justify-content: space-between
-}
-
 .descripcion {
     width: 100%;
 }
 
-/* Diseños para la parte de la tabla de articulos*/
+/* Diseños para botones de agregar y quitar stock */
+
+.agregar-stock, .quitar-stock {
+    width: 170px;
+}
+
+.agregar-stock textarea, .quitar-stock textarea {
+    width: 100px;
+}
+
+.agregar-stock button, .quitar-stock button {
+    margin: 0px 20px 20px 0px;
+    width: 30px;
+    height: 30px;
+}
+
+.agregar-stock, .quitar-stock {
+    width: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Diseños para la parte de la tabla de articulos */
 
 .tabla-articulos {
-    height: 327px;
+    height: 500px;
     display: block;
     overflow-x: auto;
 }
@@ -65,39 +81,6 @@
     cursor: pointer;
 }
 
-.tabla-articulos input[type="text"] {
-    width: 100%;
-}
-
 .tabla-articulos::-webkit-scrollbar {
     display: none;
-}
-
-/* Clases de listado de articulos */
-
-.listado-articulos-agregados {
-    display: grid;
-    grid-template-columns: 70% 20%;
-    justify-content: space-between
-}
-
-.fecha-y-guardar {
-    margin: 10px;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
-
-.tabla-articulos-agregados{
-    max-height: 280px;
-    overflow-y: auto;
-}
-
-.tabla-articulos-agregados table {
-    border: 2px solid black; 
-    border-radius: 10px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    margin: 0;
-    padding: 0 ;
 }
