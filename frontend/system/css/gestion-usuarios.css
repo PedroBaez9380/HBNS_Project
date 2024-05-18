@@ -2,10 +2,7 @@
     border: 2px solid black; 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.tabla-usuarios::-webkit-scrollbar {
-    display: none;
+    margin-bottom: 20px;
 }
 
 .gestion-usuarios {
@@ -61,7 +58,6 @@
 
 /* Diseños para la parte de la tabla de usuarios */
 
-
 .tabla-usuarios {
     height: 100%;
     display: block;
@@ -100,6 +96,10 @@
 
 .tabla-usuarios input[type="text"] {
     width: 100%;
+}
+
+.tabla-usuarios::-webkit-scrollbar {
+    display: none;
 }
 
 
