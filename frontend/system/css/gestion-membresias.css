@@ -1,0 +1,63 @@
+.gestion-membresias, .tabla-membresias{
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.gestion-membresias textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campos div{
+    width: 80%;
+}
+
+/* Diseños para la parte de la tabla de articulos */
+
+.tabla-membresias {
+    height: 500px;
+    display: block;
+    overflow-x: auto;
+}
+
+.tabla-membresias {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-membresias table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tabla-membresias th, .tabla-membresias td {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.tabla-membresias table thead th {
+    background: lightgray;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+#tabla-cuerpo tr:hover td {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.tabla-membresias::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botones */
+.botones button {
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
