@@ -31,7 +31,7 @@ namespace ApiHBNS.Controllers
 
                 // Validar el token JWT
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.ASCII.GetBytes("SteinsGate");
+                var key = Encoding.ASCII.GetBytes("SteinsGate123456789012345678901234567890");
 
                 try
                 {
@@ -60,26 +60,6 @@ namespace ApiHBNS.Controllers
             }
         }
 
-        //public IActionResult ListarLogin(Login login)
-        //{
-        //    // Verificar las credenciales del usuario y obtener su ID, por ejemplo
-        //    int userId = VerificarCredenciales(login);
-
-        //    if (userId != -1)
-        //    {
-        //        // Generar token de acceso
-        //        string accessToken = GenerarTokenAcceso(userId);
-
-        //        // Devolver respuesta con el token de acceso
-        //        return Ok(new { success = true, message = "Inicio de sesión exitoso", accessToken });
-        //    }
-        //    else
-        //    {
-        //        // Devolver respuesta de error si las credenciales son incorrectas
-        //        return Unauthorized(new { success = false, message = "Credenciales incorrectas" });
-        //    }
-        //}
-
         private int VerificarCredenciales(Login login)
         {
             // Aquí iría tu lógica para verificar las credenciales, por ejemplo, consultar la base de datos
@@ -104,7 +84,7 @@ namespace ApiHBNS.Controllers
         private string GenerarTokenAcceso(int userId)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("SteinsGate");
+            var key = Encoding.ASCII.GetBytes("SteinsGate123456789012345678901234567890");
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
@@ -118,32 +98,5 @@ namespace ApiHBNS.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
-
-
-        //private string GenerarTokenAcceso(int userId)
-        //{
-        //    var tokenHandler = new JwtSecurityTokenHandler();
-
-        //    // Generar una clave aleatoria y segura con la longitud adecuada (256 bits = 32 bytes)
-        //    var randomNumberGenerator = RandomNumberGenerator.Create();
-        //    var key = new byte[32];
-        //    randomNumberGenerator.GetBytes(key);
-
-        //    var tokenDescriptor = new SecurityTokenDescriptor
-        //    {
-        //        Subject = new ClaimsIdentity(new Claim[]
-        //        {
-        //    new Claim(ClaimTypes.NameIdentifier, userId.ToString())
-        //            // Puedes agregar más claims según tus necesidades, como el nombre del usuario, roles, etc.
-        //        }),
-        //        Expires = DateTime.UtcNow.AddHours(1), // Tiempo de expiración del token
-        //        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-        //    };
-
-        //    var token = tokenHandler.CreateToken(tokenDescriptor);
-        //    return tokenHandler.WriteToken(token);
-        //}
-
-
     }
 }

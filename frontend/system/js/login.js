@@ -23,7 +23,7 @@ function login() {
             console.log(result);
             localStorage.setItem('accessToken', result.accessToken);
             var accessToken = result.accessToken;
-            window.location.href = "funciones.html?token=" + accessToken;
+            window.location.href = "funciones.html?id=" + $("#usuario").val();
         } else {
             alert(result.message);
         }

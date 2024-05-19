@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\recursos\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:recursos\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Parametro.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Recursos\\Parametro.cs",
-              "RelativeDocumentMoniker": "Recursos\\Parametro.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Recursos\\Parametro.cs",
-              "RelativeToolTip": "Recursos\\Parametro.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T19:30:16.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginController.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAiwCEAAABAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAowFcAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T18:29:41.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\Login.cs",
-              "RelativeDocumentMoniker": "Models\\Login.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\Login.cs",
-              "RelativeToolTip": "Models\\Login.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-19T17:48:12.228Z",
+              "WhenOpened": "2024-05-19T23:17:39.101Z",
               "EditorCaption": ""
             }
           ]
