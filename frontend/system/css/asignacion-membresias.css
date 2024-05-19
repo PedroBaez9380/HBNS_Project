@@ -1,0 +1,28 @@
+.asignacion-rol { 
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.abreviatura textarea, .descripcion textarea {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.botones button {
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.tabla-asignaciones {
+    overflow-y: auto;
+    max-height: 300px;
+    width: 500px;
+}
+
+.tabla-asignaciones table {
+    margin: 0;
+    padding: 0;
+}
