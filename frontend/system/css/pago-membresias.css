@@ -1,0 +1,53 @@
+.seccion-info-membresia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-info-membresia h4 {
+    text-align: center;
+}
+
+.seccion-info-membresia p {
+    margin-left: 15px;
+}
+
+.membresia-arriba > div, .membresia-abajo > div {
+    display: flex;
+}
+
+.membresia-arriba {
+    width: 500px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.membresia-abajo {
+    margin-top: -8px;
+    width: 500px;
+    border: 1px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#estatus-membresia-actual {
+    padding-bottom: 100px;
+}
+
+#tipo-membresia , #fecha-inicio-actual, #fecha-inicio-siguiente , #fecha-vencimiento-actual, #fecha-vencimiento-siguiente, #estatus-membresia-actual, #estatus-membresia-siguiente  {
+    padding: 3px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+
+
+
+.estatus button {
+    height: 30px;
+    margin-left: 20px;
+}
