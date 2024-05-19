@@ -1,7 +1,7 @@
 function crearQuejaSugerencia() {
     var formattedDate = new Date().toISOString().slice(0, 10);
     $.ajax({
-        url: "https://localhost:7122/QuejasSugerencias/Guardar",
+        url: "https://localhost:7131/QuejasSugerencias/Guardar",
         type: 'POST',
         contentType: "application/json; charset=utf-8",
         dataType: 'json',
@@ -24,8 +24,8 @@ function crearQuejaSugerencia() {
 }
 
 $("#form-quejas-sugerencias").submit(function (event) {
-    if ($("#nombre").val() === "" || $("#email").val() === "" || $("#descripcion").val() === "") {
-        alert("Favor de completar los campos")
+    if ($("#descripcion").val() === "") {
+        alert("Favor de agregar una descripcion")
         event.preventDefault()
         event.stopPropagation()
     } else {
