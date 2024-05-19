@@ -1,0 +1,103 @@
+.articulo-venta, .tabla-articulos, .listado-articulos-agregados {
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.articulo-venta textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.codigo-stock {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+    justify-content: space-between
+}
+
+.precio-cantidad {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 60% 30%;
+    justify-content: space-between
+}
+
+.descripcion {
+    width: 100%;
+}
+
+/* Diseños para la parte de la tabla de articulos*/
+
+.tabla-articulos {
+    height: 327px;
+    display: block;
+    overflow-x: auto;
+}
+
+.tabla-articulos {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-articulos table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tabla-articulos th, .tabla-articulos td {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.tabla-articulos table thead th {
+    background: lightgray;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+#tabla-cuerpo tr:hover td {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.tabla-articulos input[type="text"] {
+    width: 100%;
+}
+
+.tabla-articulos::-webkit-scrollbar {
+    display: none;
+}
+
+/* Clases de listado de articulos */
+
+.listado-articulos-agregados {
+    display: grid;
+    grid-template-columns: 70% 20%;
+    justify-content: space-between
+}
+
+.fecha-y-guardar {
+    margin: 10px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.tabla-articulos-agregados{
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.tabla-articulos-agregados table {
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    margin: 0;
+    padding: 0 ;
+}
