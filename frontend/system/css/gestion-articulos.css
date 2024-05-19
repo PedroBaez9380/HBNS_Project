@@ -1,0 +1,63 @@
+.gestion-articulos, .tabla-articulos{
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.gestion-articulos textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campos div{
+    width: 80%;
+}
+
+/* Diseños para la parte de la tabla de articulos */
+
+.tabla-articulos {
+    height: 500px;
+    display: block;
+    overflow-x: auto;
+}
+
+.tabla-articulos {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-articulos table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tabla-articulos th, .tabla-articulos td {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.tabla-articulos table thead th {
+    background: lightgray;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+#tabla-cuerpo tr:hover td {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.tabla-articulos::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botones */
+.botones button {
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
