@@ -1,0 +1,63 @@
+.gestion-sueldos, .tabla-sueldos{
+    border: 2px solid black; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.gestion-sueldos textarea {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campos div{
+    width: 80%;
+}
+
+/* Diseños para la parte de la tabla de sueldos */
+
+.tabla-sueldos {
+    height: 500px;
+    display: block;
+    overflow-x: auto;
+}
+
+.tabla-sueldos {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+
+.tabla-sueldos table {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tabla-sueldos th, .tabla-sueldos td {
+    padding: 10px 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.tabla-sueldos table thead th {
+    background: lightgray;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+#tabla-cuerpo tr:hover td {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.tabla-sueldos::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botones */
+.botones button {
+    margin: 10px;
+    width: 120px;
+    text-align: center;
+}
