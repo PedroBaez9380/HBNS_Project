@@ -1,0 +1,45 @@
+.seccion-pago-sueldo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-pago-sueldo h4 {
+    text-align: center;
+}
+
+.seccion-pago-sueldo p {
+    margin-left: 15px;
+}
+
+.periodo-pagar {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.periodo-pagar > div, .periodo-pagar > div {
+    display: flex;
+}
+
+.periodo-pagar > div {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 40% 20% 10%;
+}
+
+.periodo-pagar > div > * {
+    width: fit-content;
+}
+
+.estatus button {
+    height: 30px;
+    margin-left: 20px;
+}
+
+#contenedor-comprobante {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
