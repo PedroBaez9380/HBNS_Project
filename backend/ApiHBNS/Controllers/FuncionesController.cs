@@ -201,7 +201,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-stock.png"" alt=""Gestion-stock"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <button class=""btn btn-link"" id=""gestion-stock"">Gestion de stock</button>
+                                    <button class=""btn btn-link"" id=""gestion-stock.html"">Gestion de stock</button>
                                 </div>
                             </div>"
                         }

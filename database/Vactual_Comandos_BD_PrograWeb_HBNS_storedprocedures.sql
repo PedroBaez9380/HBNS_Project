@@ -289,9 +289,9 @@ END
 
 
 CREATE PROCEDURE [dbo].[GestionAsignacionesHorarios]
-    @Option VARCHAR(10),
-    @ID_usuario INT,
-    @ID_horarios VARCHAR(MAX)
+    @Option VARCHAR(10) = NULL,
+    @ID_usuario INT = NULL,
+    @ID_horarios VARCHAR(MAX) = NULL
 AS
 BEGIN
     IF @Option = 'SELECT'
@@ -314,6 +314,52 @@ BEGIN
         FROM @HorariosTabla;
     END
 END
+
+CREATE PROCEDURE [dbo].[GestionUsuario]
+    @Option VARCHAR(10),
+    @ID_usuario INT = NULL,
+    @ID_tipo_usuario INT = NULL,
+    @Contrasena VARCHAR(100) = NULL,
+    @Nombre VARCHAR(50) = NULL,
+    @Apellido VARCHAR(50) = NULL,
+    @Telefono NVARCHAR(15) = NULL,
+    @Correo NVARCHAR(320) = NULL,
+    @Fecha_registro DATETIME = NULL,
+    @Fecha_nacimiento DATETIME = NULL,
+    @ID_membresia INT = NULL,
+    @Estado BIT = NULL
+AS
+BEGIN
+    IF @Option = 'SELECT'
+    BEGIN
+        SELECT *
+        FROM Usuario
+        WHERE ID_usuario = @ID_usuario;
+    END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado)
+        VALUES (@ID_tipo_usuario, @Contrasena, @Nombre, @Apellido, @Telefono, @Correo, @Fecha_registro, @Fecha_nacimiento, @ID_membresia, @Estado);
+    END
+    ELSE IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE Usuario
+        SET 
+            ID_tipo_usuario = @ID_tipo_usuario,
+            Contrasena = @Contrasena,
+            Nombre = @Nombre,
+            Apellido = @Apellido,
+            Telefono = @Telefono,
+            Correo = @Correo,
+            Fecha_registro = @Fecha_registro,
+            Fecha_nacimiento = @Fecha_nacimiento,
+            ID_membresia = @ID_membresia,
+            Estado = @Estado
+        WHERE ID_usuario = @ID_usuario;
+    END
+END
+
+
 
 
 
@@ -340,7 +386,7 @@ VALUES (1, 'pedrito01', 'Pedro Alberto', 'Baez Najera', 8128644703, 'pedro.baezn
 INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado )
 VALUES (1, 'zac', 'Pedro Alberto', 'Baez Najera', 8128644703, 'pedro.baeznjr@uanl.edu.mx', '2024-05-19', '2004-04-27', NULL, 1);
 
-INSERT INTO AsignacionRol VALUES (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
+INSERT INTO AsignacionRol VALUES (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
 
 INSERT INTO Clase VALUES ('HipHop')
 INSERT INTO Horario VALUES (1, 'HipHopM8-9', '8:00', '9:00', 1)

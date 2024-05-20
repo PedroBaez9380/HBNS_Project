@@ -25,7 +25,7 @@
         </div>
     </section>
     <section class="asignacion-horarios text-center">
-        <h1>Gestion de horarios</h1>
+        <h1>Asignacion de horarios</h1>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8 asignacion-horario d-flex flex-column align-items-center">
@@ -39,21 +39,14 @@
                         <div class="todos-horarios">
                             <div class="horario">
                                 <h5>Hora</h5>
-                                <div class="contenedor-horario d-flex align-items-center m-3">
-                                    <div class="clase-horario">
-                                        <p>Clase:</p>   <select id="lstClases" name="lstClases" class="form-select" disabled>
-                                                            <option selected value="">Seleccionar opcion</option>
-                                                        </select>
-                                        <p>Horario:</p> <select id="lstHorarios" name="lstHorarios" class="form-select" disabled>
-                                                            <option selected value="">Seleccionar opcion</option>
-                                                        </select>                                
-                                    </div>
-                                    <button class="boton-menos">-</button>
+                                <div id="contenedor-horarios">
+                                    
                                 </div>
+                                
                                 <div class="contenedor-boton-mas  m-3">
                                     <button id="boton-mas">+</button>
                                 </div>
-                                <div class="boton-guardar m-5">
+                                <div class="boton-guardar m-5" id="boton-guardar">
                                     <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
                                 </div>
                                 
@@ -68,8 +61,13 @@
     <!-- Bootstrap script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+    <script src="../js/asignacion-horarios.js"></script>
 </body>
 </html>
