@@ -17,7 +17,7 @@
 /* Diseños para la parte de la tabla de articulos */
 
 .tabla-articulos {
-    height: 500px;
+    height: 700px;
     display: block;
     overflow-x: auto;
 }
