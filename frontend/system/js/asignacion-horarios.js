@@ -74,6 +74,7 @@ $(document).ready(function() {
                 console.error(xhr);
             });
 
+            // Realizar la petición AJAX
             $.ajax({
                 url: "https://localhost:7131/AsignacionHorarios/Traer/" + $(this).val(),
                 type: 'GET',
@@ -86,21 +87,28 @@ $(document).ready(function() {
                             <div class="clase-horario">
                                 <p>Nomenclatura de horario:</p> 
                                 <select name="lstClases" class="form-select combo-box-nomenclaturas" id="horario-${item.ID_horario}">
-                                    <option value="${item.ID_horario}"></option>
+                                    <option selected value="${item.ID_horario}"></option>
                                 </select>                       
                             </div>
                             <button class="boton-menos">-</button>
                         </div>
                     `);
-                    traerNomenclaturaHorarios();
-                    document.getElementById('horario-' + item.ID_horario).value = item.ID_horario;
-
                 });
-                
+            
+                // Esperar un breve período antes de realizar la selección automática
+                setTimeout(function() {
+                    result.usuarios.forEach(function(item, index) {
+                        $('#horario-' + item.ID_horario).val(item.ID_horario);
+                    });
+                }, 100); // 100 milisegundos de espera
+            
+                traerNomenclaturaHorarios();
             }).fail(function (xhr, status, error) {
                 alert("Hubo un problema al traer los horarios: " + error + "\nStatus: " + status);
                 console.error(xhr);
             });
+            
+
 
         }
     });
@@ -108,12 +116,12 @@ $(document).ready(function() {
 
 function traerNomenclaturaHorarios() {
     $.ajax({
-        url: "https://localhost:7131/Horarios/Nomenclaturas",
+        url: "https://localhost:7131/Horarios/Traer",
         type: 'GET',
         dataType: 'json',
         crossDomain: true
     }).done(function (result) {
-        var opciones = '<option selected value="">Seleccionar opción</option>';
+        var opciones = '<option selected value="0">Seleccionar opción</option>';
         result.result.horario.forEach(function(item) {
             opciones += '<option value="' + item.iD_horario + '">' + item.nomenclatura + '</option>';
         });
@@ -128,6 +136,17 @@ function traerNomenclaturaHorarios() {
         console.error(xhr);
     });
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

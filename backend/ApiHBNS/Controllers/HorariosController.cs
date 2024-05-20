@@ -16,10 +16,15 @@ namespace ApiHBNS.Controllers
 
 
         [HttpGet]
-        [Route("Nomenclaturas")]
-        public dynamic listarQuejas()
+        [Route("Traer")]
+        public dynamic listarHorarios()
         {
-            DataTable tNomenclaturaHorarios = DBDatos.Listar("ObtenerHorarios");
+            List<Parametro> parametros = new List<Parametro>
+                {
+                    new Parametro("@Option", "SELECT"),
+                }; 
+
+            DataTable tNomenclaturaHorarios = DBDatos.Listar("GestionHorarios", parametros);
 
             // Funcion para convertir la DataTable a una lista de diccionarios
             var HorariosList = new List<Dictionary<string, object>>();
@@ -45,6 +50,55 @@ namespace ApiHBNS.Controllers
                 }
             };
         }
+        [HttpPost]
+        [Route("Guardar")]
+        public dynamic GuardarHorario(Horarios Horarios)
+        {
+
+            List<Parametro> parametros = new List<Parametro>
+            {
+                new Parametro("@Option", "INSERT"),
+                new Parametro("@ID_clase", Horarios.ID_clase.ToString()),
+                new Parametro("@Nomenclatura", Horarios.Nomenclatura.ToString()),
+                new Parametro("@Hora_inicio", Horarios.Hora_inicio.ToString()),
+                new Parametro("@Hora_final", Horarios.Hora_final.ToString()),
+                new Parametro("@ID_dia", Horarios.ID_dia.ToString()),
+            };
+
+            dynamic result = DBDatos.Ejecutar("GestionHorarios", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+        [HttpPut]
+        [Route("Actualizar")]
+        public dynamic ActualizarHorario(Horarios Horarios)
+        {
+            List<Parametro> parametros = new List<Parametro>
+    {
+        new Parametro("@Option", "UPDATE"),
+        new Parametro("@ID_horario", Horarios.ID_horario.ToString()), // Se supone que tienes este ID para identificar el registro a actualizar
+        new Parametro("@ID_clase", Horarios.ID_clase.ToString()),
+        new Parametro("@Nomenclatura", Horarios.Nomenclatura.ToString()),
+        new Parametro("@Hora_inicio", Horarios.Hora_inicio.ToString()),
+        new Parametro("@Hora_final", Horarios.Hora_final.ToString()),
+        new Parametro("@ID_dia", Horarios.ID_dia.ToString()),
+    };
+
+            dynamic result = DBDatos.Ejecutar("GestionHorarios", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+
     }
 }
 
