@@ -55,7 +55,6 @@ $(document).ready(function() {
     $('#id-usuario').on('keydown', function(e) {
         if (e.which === 13) { // Código de tecla 13 es Enter
             e.preventDefault();
-            // alert('Enter presionado en #id-usuario');
             $('#contenedor-horarios').empty();
             $.ajax({
                 url: "https://localhost:7131/Usuarios/Traer/" + $(this).val(),
@@ -74,7 +73,7 @@ $(document).ready(function() {
                 console.error(xhr);
             });
 
-            // Realizar la petición AJAX
+           
             $.ajax({
                 url: "https://localhost:7131/AsignacionHorarios/Traer/" + $(this).val(),
                 type: 'GET',
@@ -95,7 +94,7 @@ $(document).ready(function() {
                     `);
                 });
             
-                // Esperar un breve período antes de realizar la selección automática
+                
                 setTimeout(function() {
                     result.usuarios.forEach(function(item, index) {
                         $('#horario-' + item.ID_horario).val(item.ID_horario);
