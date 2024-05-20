@@ -44,7 +44,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-chat.png"" alt=""Admin-usuarios"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""chat.html"">Chat</a>
+                                    <button class=""btn btn-link"" id=""chat.html"">Chat</button>
                                 </div>
                             </div>",
                             @"
@@ -53,7 +53,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-horario.png"" alt=""Horario"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""horario.html"">Tu horario</a>
+                                    <button class=""btn btn-link"" id=""horario.html"">Tu horario</button>
                                 </div>
                             </div>",
                             @"
@@ -62,7 +62,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-perfil.png"" alt=""Perfil"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""perfil.html"">Tu perfil</a>
+                                    <button class=""btn btn-link"" id=""perfil.html"">Tu perfil</button>
                                 </div>
                             </div>"
 
@@ -77,7 +77,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-chat.png"" alt=""Admin-usuarios"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""chat.html"">Chat</a>
+                                    <button class=""btn btn-link"" id=""chat.html"">Chat</button>
                                 </div>
                             </div>",
                             @"
@@ -86,7 +86,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-horario.png"" alt=""Horario"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""horario.html"">Tu horario</a>
+                                    <button class=""btn btn-link"" id=""horario.html"">Tu horario</button>
                                 </div>
                             </div>",
                             @"
@@ -95,7 +95,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-perfil.png"" alt=""Perfil"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""perfil.html"">Tu perfil</a>
+                                    <button class=""btn btn-link"" id=""perfil.html"">Tu perfil</button>
                                 </div>
                             </div>",
                             @"
@@ -104,7 +104,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-informacion-membresia.png"" alt=""Estatus-membresia"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""info-membresia.html"">Informacion de membresia</a>
+                                    <button class=""btn btn-link"" id=""info-membresia.html"">Informacion de membresia</button>
                                 </div>
                             </div>"
                         }
@@ -118,7 +118,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-usuarios.png"" alt=""Gestion-usuarios"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-usuarios.html"">Gestion de usuarios</a>
+                                    <button class=""btn btn-link"" id=""gestion-usuarios.html"">Gestion de usuarios</button>
                                 </div>
                             </div>",
                             @"
@@ -127,7 +127,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-tipo-usuario.png"" alt=""Tipo-usuario"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""tipo-usuario.html"">Gestion de tipo de usuario</a>
+                                    <button class=""btn btn-link"" id=""tipo-usuario.html"">Gestion de tipos de usuario</button>
                                 </div>
                             </div>"
                         }
@@ -141,7 +141,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-asignacion-roles.png"" alt=""Asign-roles"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""asignacion-roles.html"">Asignacion de roles</a>
+                                    <button class=""btn btn-link"" id=""asignacion-roles.html"">Asignacion de roles</button>
                                 </div>
                             </div>"
                         }
@@ -155,16 +155,16 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-asignacion-horarios.png"" alt=""Asign-horarios"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""asignacion-horarios.html"">Asignacion de horarios</a>
+                                    <button class=""btn btn-link"" id=""asignacion-horarios.html"">Asignacion de horarios</button>
                                 </div>
                             </div>",
                             @"
                             <div class=""row justify-content-center"">
                                 <div class=""col-lg-1 col-sm-12 imagen-funcion d-flex align-items-center justify-content-center"">
-                                    <img src=""../images/imagenes-funciones/logo-chat.png"" alt=""Admin-usuarios"">
+                                    <img src=""../images/imagenes-funciones/logo-chat.png"" alt=""Chat"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""chat.html"">Chat</a>
+                                   <button class=""btn btn-link"" id=""chat.html"">Chat</button>
                                 </div>
                             </div>"
                         }
@@ -178,7 +178,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-horarios.png"" alt=""Gestion-horarios"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-horarios.html"">Gestion de horarios</a>
+                                    <button class=""btn btn-link"" id=""gestion-horarios.html"">Gestion de horarios</button>
                                 </div>
                             </div>"
                         }
@@ -192,7 +192,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-compra-articulos.png"" alt=""Compra-articulos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""compra-articulos.html"">Compra de articulos</a>
+                                    <button class=""btn btn-link"" id=""compra-articulos.html"">Compra de articulos</button>
                                 </div>
                             </div>",
                             @"
@@ -201,7 +201,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-stock.png"" alt=""Gestion-stock"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-stock.html"">Gestion de stock</a>
+                                    <button class=""btn btn-link"" id=""gestion-stock"">Gestion de stock</button>
                                 </div>
                             </div>"
                         }
@@ -215,7 +215,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-articulos.png"" alt=""Gestion-articulos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-articulos.html"">Gestion de articulos</a>
+                                    <button class=""btn btn-link"" id=""gestion-articulos.html"">Gestion de articulos</button>
                                 </div>
                             </div>",
                             @"
@@ -224,7 +224,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-compras.png"" alt=""Gestion-compras"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-compras.html"">Gestion de compras</a>
+                                    <button class=""btn btn-link"" id=""gestion-compras.html"">Gestion de compras</button>
                                 </div>
                             </div>"
 
@@ -239,7 +239,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-venta-articulos.png"" alt=""logo-venta-articulos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""venta-articulos.html"">Venta de articulos</a>
+                                    <button class=""btn btn-link"" id=""venta-articulos.html"">Venta de articulos</button>
                                 </div>
                             </div>"
                         }
@@ -253,7 +253,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-ventas.png"" alt=""Gestion-ventas"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-ventas.html"">Gestion de ventas</a>
+                                    <button class=""btn btn-link"" id=""gestion-ventas.html"">Gestion de ventas</button>
                                 </div>
                             </div>"
                         }
@@ -267,7 +267,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-pago-membresias.png"" alt=""Pagos-membresias"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""pago-membresias.html"">Pago de membresias</a>
+                                    <button class=""btn btn-link"" id=""pago-membresias.html"">Pago de membresias</button>
                                 </div>
                             </div>",
                             @"
@@ -276,7 +276,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-pago-sueldos.png"" alt=""Pagos-sueldos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""pago-sueldo.html"">Pago de sueldos</a>
+                                    <button class=""btn btn-link"" id=""pago-sueldo.html"">Pago de sueldos</button>
                                 </div>
                             </div>"
                         }
@@ -290,7 +290,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-asignacion-membresias.png"" alt=""Asign-membresias"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""asignacion-membresias.html"">Asignacion de membresias</a>
+                                    <button class=""btn btn-link"" id=""asignacion-membresias.html"">Asignacion de membresias</button>
                                 </div>
                             </div>",
                             @"
@@ -299,7 +299,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-asignacion-sueldo.png"" alt=""Asign-sueldos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""asignacion-sueldos.html"">Asignacion de sueldos</a>
+                                    <button class=""btn btn-link"" id=""asignacion-sueldos.html"">Asignacion de sueldos</button>
                                 </div>
                             </div>",
                             @"
@@ -308,7 +308,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-gestion-membresias.png"" alt=""Gestion-membresias"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""gestion-membresias.html"">Gestion de membresias</a>
+                                    <button class=""btn btn-link"" id=""gestion-membresias.html"">Gestion de membresias</button>
                                 </div>
                             </div>",
                             @"
@@ -317,7 +317,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-reporte-membresias.png"" alt=""Reporte-membresias"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""reporte-membresias.html"">Reporte de membresias</a>
+                                    <button class=""btn btn-link"" id=""reporte-membresias.html"">Reporte de membresias</button>
                                 </div>
                             </div>",
                             @"
@@ -326,7 +326,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-reporte-sueldos.png"" alt=""Reporte-sueldos"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""reporte-sueldos.html"">Reporte de sueldos</a>
+                                    <button class=""btn btn-link"" id=""reporte-sueldos.html"">Reporte de sueldos</button>
                                 </div>
                             </div>"
                         }
@@ -340,7 +340,7 @@ namespace ApiHBNS.Controllers
                                     <img src=""../images/imagenes-funciones/logo-reportes.png"" alt=""Reporte-general"">
                                 </div>
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
-                                    <a href=""reporte-general.html"">Reporte general</a>
+                                    <button class=""btn btn-link"" id=""reporte-general.html"">Reporte general</button>
                                 </div>
                             </div>"
                         }
