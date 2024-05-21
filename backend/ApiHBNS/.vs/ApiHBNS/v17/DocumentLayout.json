@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\horarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\horarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\asignacionhorarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\asignacionhorarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\models\\horarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:models\\horarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\usuarioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\models\\asignacionhorarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:models\\asignacionhorarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Horarios.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\Horarios.cs",
-              "RelativeDocumentMoniker": "Models\\Horarios.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\Horarios.cs",
-              "RelativeToolTip": "Models\\Horarios.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T18:47:33.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HorariosController.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\HorariosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HorariosController.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\HorariosController.cs",
-              "RelativeToolTip": "Controllers\\HorariosController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAqwGQAAAAAAAAA",
+              "Title": "AsignacionHorariosController.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\AsignacionHorariosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AsignacionHorariosController.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\AsignacionHorariosController.cs",
+              "RelativeToolTip": "Controllers\\AsignacionHorariosController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T18:47:32.103Z",
+              "WhenOpened": "2024-05-21T00:39:49.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsuariosController.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\UsuariosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\UsuariosController.cs",
-              "RelativeToolTip": "Controllers\\UsuariosController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwBIAAAAcAAAA",
+              "DocumentIndex": 1,
+              "Title": "AsignacionHorarios.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\AsignacionHorarios.cs",
+              "RelativeDocumentMoniker": "Models\\AsignacionHorarios.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\AsignacionHorarios.cs",
+              "RelativeToolTip": "Models\\AsignacionHorarios.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-20T17:34:59.191Z",
+              "WhenOpened": "2024-05-21T00:39:48.728Z",
               "EditorCaption": ""
             }
           ]

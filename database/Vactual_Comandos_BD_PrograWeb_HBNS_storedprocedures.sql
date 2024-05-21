@@ -192,6 +192,8 @@ CREATE TABLE QuejasSugerencias (
     Fecha DATETIME not null,
 );
 
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------Comandos definiciones de datos en tablas-----------------------------------------------------------------------------------------
@@ -281,11 +283,49 @@ BEGIN
 END
 
 
-CREATE PROCEDURE [dbo].[ObtenerHorarios]
+CREATE PROCEDURE [dbo].[GestionHorarios]
+    @Option VARCHAR(10) = NULL,
+    @ID_horario INT = NULL,
+    @ID_clase INT = NULL,
+    @Nomenclatura NVARCHAR(15) = NULL,
+    @Hora_inicio TIME = NULL,
+    @Hora_final TIME = NULL,
+    @ID_dia INT = NULL
 AS
 BEGIN
-    SELECT * from Horario
+    IF @Option = 'SELECT'
+    BEGIN
+        SELECT
+            H.*,
+            D.Descripcion AS DescripcionDia, 
+            C.Nombre AS NombreClase
+        FROM Horario H
+        LEFT JOIN DiaSemana D ON H.ID_dia = D.ID_dia
+        LEFT JOIN Clase C ON H.ID_clase = C.ID_clase;
+    END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        INSERT INTO Horario (ID_clase, Nomenclatura, Hora_inicio, Hora_final, ID_dia)
+        VALUES (@ID_clase, @Nomenclatura, @Hora_inicio, @Hora_final, @ID_dia);
+    END
+    ELSE IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE Horario
+        SET ID_clase = @ID_clase,
+            Nomenclatura = @Nomenclatura,
+            Hora_inicio = @Hora_inicio,
+            Hora_final = @Hora_final,
+            ID_dia = @ID_dia
+        WHERE ID_horario = @ID_horario;
+    END
+    ELSE IF @Option = 'DELETE'
+    BEGIN
+        DELETE FROM Horario
+        WHERE ID_horario = @ID_horario;
+    END
 END
+
+
 
 
 CREATE PROCEDURE [dbo].[GestionAsignacionesHorarios]
@@ -296,9 +336,16 @@ AS
 BEGIN
     IF @Option = 'SELECT'
     BEGIN
-        SELECT *
-        FROM AsignacionHorario
-        WHERE ID_usuario = @ID_usuario;
+        SELECT 
+            AH.*,
+            H.*,
+            C.Nombre AS NombreClase,
+            DS.Descripcion AS DescripcionDia
+        FROM AsignacionHorario AH
+        INNER JOIN Horario H ON AH.ID_horario = H.ID_horario
+        INNER JOIN Clase C ON H.ID_clase = C.ID_clase
+        INNER JOIN DiaSemana DS ON H.ID_dia = DS.ID_dia
+        WHERE AH.ID_usuario = @ID_usuario;
     END
     ELSE IF @Option = 'INSERT'
     BEGIN
@@ -314,6 +361,7 @@ BEGIN
         FROM @HorariosTabla;
     END
 END
+
 
 CREATE PROCEDURE [dbo].[GestionUsuario]
     @Option VARCHAR(10),
@@ -359,6 +407,40 @@ BEGIN
     END
 END
 
+CREATE PROCEDURE [dbo].[TraerDiaSemana]
+AS
+BEGIN
+	SELECT * FROM DiaSemana
+END
+
+CREATE PROCEDURE [dbo].[GestionClases]
+    @Option VARCHAR(10) = NULL,
+    @ID_clase INT = NULL,
+    @Nombre VARCHAR(40) = NULL
+AS
+BEGIN
+    IF @Option = 'SELECT'
+    BEGIN
+        SELECT *
+        FROM Clase;
+    END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        INSERT INTO Clase (Nombre)
+        VALUES (@Nombre);
+    END
+    ELSE IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE Clase
+        SET Nombre = @Nombre
+        WHERE ID_clase = @ID_clase;
+    END
+    ELSE IF @Option = 'DELETE'
+    BEGIN
+        DELETE FROM Clase
+        WHERE ID_clase = @ID_clase;
+    END
+END
 
 
 

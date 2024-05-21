@@ -74,20 +74,40 @@ namespace ApiHBNS.Controllers
                 result = ""
             };
         }
+
         [HttpPut]
         [Route("Actualizar")]
         public dynamic ActualizarHorario(Horarios Horarios)
         {
             List<Parametro> parametros = new List<Parametro>
-    {
-        new Parametro("@Option", "UPDATE"),
-        new Parametro("@ID_horario", Horarios.ID_horario.ToString()), // Se supone que tienes este ID para identificar el registro a actualizar
-        new Parametro("@ID_clase", Horarios.ID_clase.ToString()),
-        new Parametro("@Nomenclatura", Horarios.Nomenclatura.ToString()),
-        new Parametro("@Hora_inicio", Horarios.Hora_inicio.ToString()),
-        new Parametro("@Hora_final", Horarios.Hora_final.ToString()),
-        new Parametro("@ID_dia", Horarios.ID_dia.ToString()),
-    };
+        {
+            new Parametro("@Option", "UPDATE"),
+            new Parametro("@ID_horario", Horarios.ID_horario.ToString()), 
+            new Parametro("@ID_clase", Horarios.ID_clase.ToString()),
+            new Parametro("@Nomenclatura", Horarios.Nomenclatura.ToString()),
+            new Parametro("@Hora_inicio", Horarios.Hora_inicio.ToString()),
+            new Parametro("@Hora_final", Horarios.Hora_final.ToString()),
+            new Parametro("@ID_dia", Horarios.ID_dia.ToString()),
+        };
+
+            dynamic result = DBDatos.Ejecutar("GestionHorarios", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+        [HttpDelete]
+        [Route("Borrar")]
+        public dynamic BorrarHorario(Horarios Horarios)
+        {
+            List<Parametro> parametros = new List<Parametro>
+        {
+            new Parametro("@Option", "DELETE"),
+            new Parametro("@ID_horario", Horarios.ID_horario.ToString()),
+        };
 
             dynamic result = DBDatos.Ejecutar("GestionHorarios", parametros);
 

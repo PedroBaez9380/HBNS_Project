@@ -54,9 +54,10 @@
                         </select>
                     </div>
                     <div class="tabla-horarios text-center">
-                            <table class="table mx-auto w-100">
+                            <table class="table mx-auto w-100 tabla-horarios">
                                 <thead>
                                     <tr>
+                                        <th scope="col">ID_Horario</th>
                                         <th scope="col">Nomenclatura</th>
                                         <th scope="col">Hora</th>
                                         <th scope="col">Clase</th>
@@ -69,17 +70,18 @@
                                         <td>nn</td>
                                         <td>nn</td>
                                         <td>nn</td>
+                                        <td>nn</td>
                                     </tr>
                                 </tbody>
                             </table>
                     </div>
                     <div class="botones-horario text-center">
                         <div>
-                            <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" id="boton-guardar">Guardar</button>
                         </div>
                         <div class="d-inline-block">
-                            <button type="button" class="btn btn-rounded btn-light">Eliminar</button>
-                            <button type="button" class="btn btn-rounded btn-light">Nuevo</button>
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-nuevo">Nuevo</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +95,7 @@
 
     <script src="../js/boton-volver.js"></script>
 
-    <script src="gestion-horarios.js"></script>
+    <script src="../js/gestion-horarios.js"></script>
 
 </body>
 </html>
