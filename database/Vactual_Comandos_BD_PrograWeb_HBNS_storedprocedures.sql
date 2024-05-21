@@ -470,6 +470,9 @@ VALUES (1, 'zac', 'Pedro Alberto', 'Baez Najera', 8128644703, 'pedro.baeznjr@uan
 
 INSERT INTO AsignacionRol VALUES (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
 
+INSERT INTO AsignacionHorario VALUES (1,18), (1,12)
+
+
 INSERT INTO Clase VALUES ('HipHop')
 INSERT INTO Horario VALUES (1, 'HipHopM8-9', '8:00', '9:00', 1)
 

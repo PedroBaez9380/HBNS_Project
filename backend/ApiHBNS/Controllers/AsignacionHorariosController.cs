@@ -28,7 +28,7 @@ namespace ApiHBNS.Controllers
 
                 DataTable tAsignacionUsuario = DBDatos.Listar("GestionAsignacionesHorarios", parametros);
 
-                var usuariosList = new List<Dictionary<string, object>>();
+                var ClasesList = new List<Dictionary<string, object>>();
                 foreach (DataRow row in tAsignacionUsuario.Rows)
                 {
                     var dict = new Dictionary<string, object>();
@@ -36,12 +36,12 @@ namespace ApiHBNS.Controllers
                     {
                         dict[col.ColumnName] = row[col];
                     }
-                    usuariosList.Add(dict);
+                    ClasesList.Add(dict);
                 }
 
-                string jsonUsuarios = JsonSerializer.Serialize(usuariosList);
+                string jsonUsuarios = JsonSerializer.Serialize(ClasesList);
 
-                return Ok(new { Usuarios = usuariosList });
+                return Ok(new { Clases = ClasesList });
             }
             catch (Exception ex)
             {
