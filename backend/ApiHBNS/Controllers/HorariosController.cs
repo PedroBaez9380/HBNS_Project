@@ -99,6 +99,8 @@ namespace ApiHBNS.Controllers
                 result = ""
             };
         }
+
+
         [HttpDelete]
         [Route("Borrar")]
         public dynamic BorrarHorario(Horarios Horarios)

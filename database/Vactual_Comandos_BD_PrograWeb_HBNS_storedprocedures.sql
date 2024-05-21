@@ -468,7 +468,7 @@ VALUES (1, 'pedrito01', 'Pedro Alberto', 'Baez Najera', 8128644703, 'pedro.baezn
 INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado )
 VALUES (1, 'zac', 'Pedro Alberto', 'Baez Najera', 8128644703, 'pedro.baeznjr@uanl.edu.mx', '2024-05-19', '2004-04-27', NULL, 1);
 
-INSERT INTO AsignacionRol VALUES (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
+INSERT INTO AsignacionRol VALUES (1,2), (2,3), (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
 
 INSERT INTO AsignacionHorario VALUES (1,18), (1,12)
 
@@ -476,6 +476,7 @@ INSERT INTO AsignacionHorario VALUES (1,18), (1,12)
 INSERT INTO Clase VALUES ('HipHop')
 INSERT INTO Horario VALUES (1, 'HipHopM8-9', '8:00', '9:00', 1)
 
+DELETE FROM AsignacionHorario WHERE ID_usuario = 1 AND ID_horario = 1
 
 select * from AsignacionHorario
 select * from Horario
@@ -488,3 +489,5 @@ select * from AsignacionRol
 select * from usuario
 
 select * from TipoUsuario
+
+EXEC GestionUsuario 'INSERT', NULL, 1, 'zac', 'Pedro Alberto', 'Baez Najera', '8128644703', 'pedro.baeznjr@uanl.edu.mx', '2024-05-19', '2004-04-27', NULL, 1

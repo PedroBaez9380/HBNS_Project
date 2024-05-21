@@ -5,6 +5,8 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Web.Http.Cors;
 using ApiHBNS.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Globalization;
 
 namespace ApiHBNS.Controllers
 {
@@ -54,18 +56,25 @@ namespace ApiHBNS.Controllers
 
         [HttpPost]
         [Route("Guardar")]
-        public dynamic GuardarAsignacionHorario(AsignacionHorarios AsignacionHorarios)
+        public dynamic GuardarUsuario(Usuarios Usuarios)
         {
-            string idHorarios = string.Join(",", AsignacionHorarios.ID_horarios);
 
             List<Parametro> parametros = new List<Parametro>
             {
-                new Parametro("@Option", AsignacionHorarios.Option.ToString()),
-                new Parametro("@ID_usuario", AsignacionHorarios.ID_usuario.ToString()),
-                new Parametro("@ID_horarios", idHorarios)
+                new Parametro("@Option", "INSERT"),
+                new Parametro("@ID_tipo_usuario", Usuarios.ID_tipo_usuario.ToString()),
+                new Parametro("@Contrasena", Usuarios.Contrasena),
+                new Parametro("@Nombre", Usuarios.Nombre),
+                new Parametro("@Apellido", Usuarios.Apellido),
+                new Parametro("@Telefono", Usuarios.Telefono),
+                new Parametro("@Correo", Usuarios.Correo),
+                new Parametro("@Fecha_registro", Usuarios.Fecha_registro),
+                new Parametro("@Fecha_nacimiento", Usuarios.Fecha_nacimiento), 
+                new Parametro("@ID_membresia", Usuarios.ID_membresia?.ToString()),
+                new Parametro("@Estado", Usuarios.Estado.ToString()),
             };
 
-            dynamic result = DBDatos.Ejecutar("GestionAsignacionesHorarios", parametros);
+            dynamic result = DBDatos.Ejecutar("GestionUsuario", parametros);
 
             return new
             {
@@ -74,6 +83,39 @@ namespace ApiHBNS.Controllers
                 result = ""
             };
         }
+
+        [HttpPut]
+        [Route("Actualizar")]
+        public dynamic ActualizarUsuario(Usuarios Usuarios)
+        {
+            List<Parametro> parametros = new List<Parametro>
+            {
+                new Parametro("@Option", "UPDATE"),
+                new Parametro("@ID_usuario", Usuarios.ID_usuario.ToString()),
+                new Parametro("@ID_tipo_usuario", Usuarios.ID_tipo_usuario.ToString()),
+                new Parametro("@Contrasena", Usuarios.Contrasena),
+                new Parametro("@Nombre", Usuarios.Nombre),
+                new Parametro("@Apellido", Usuarios.Apellido),
+                new Parametro("@Telefono", Usuarios.Telefono),
+                new Parametro("@Correo", Usuarios.Correo),
+                new Parametro("@Fecha_registro", Usuarios.Fecha_registro), 
+                new Parametro("@Fecha_nacimiento", Usuarios.Fecha_nacimiento),
+                new Parametro("@ID_membresia", Usuarios.ID_membresia?.ToString()),
+                new Parametro("@Estado", Usuarios.Estado.ToString()),
+            };
+
+            dynamic result = DBDatos.Ejecutar("GestionUsuario", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+
+        //Usuario no tiene DELETE, solo se desactiva administrativamente con el campo Estado
+
     }
 }
 

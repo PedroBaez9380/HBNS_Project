@@ -1,6 +1,7 @@
 $(document).ready(function() {
     traerNomenclaturaHorarios();
-
+    $('#boton-mas').attr('disabled', true);
+    $('#boton-guardar').attr('disabled', true);
     $('#boton-mas').on('click', function() {
         $('#contenedor-horarios').append(`
             <div class="contenedor-horario d-flex align-items-center m-3">
@@ -43,9 +44,12 @@ $(document).ready(function() {
         }).done(function (result) {
             console.log(result);
             alert("Guardado exitoso!");
-
+            $('#boton-mas').attr('disabled', true);
+            $('#boton-guardar').attr('disabled', true);
             $('#id-usuario, #nombre-usuario').val('');
             $('#contenedor-horarios').empty();
+            
+            console.log('Botones deshabilitados');
         }).fail(function (xhr, status, error) {
             alert("Hubo un problema al guardar: " + error + "\nStatus: " + status);
             console.error(xhr);
@@ -80,7 +84,7 @@ $(document).ready(function() {
                 dataType: 'json',
                 crossDomain: true
             }).done(function (result) {
-                result.usuarios.forEach(function(item, index) {
+                result.clases.forEach(function(item, index) {
                     $('#contenedor-horarios').append(`
                         <div class="contenedor-horario d-flex align-items-center m-3">
                             <div class="clase-horario">
@@ -96,7 +100,7 @@ $(document).ready(function() {
             
                 
                 setTimeout(function() {
-                    result.usuarios.forEach(function(item, index) {
+                    result.clases.forEach(function(item, index) {
                         $('#horario-' + item.ID_horario).val(item.ID_horario);
                     });
                 }, 100); // 100 milisegundos de espera
@@ -106,9 +110,8 @@ $(document).ready(function() {
                 alert("Hubo un problema al traer los horarios: " + error + "\nStatus: " + status);
                 console.error(xhr);
             });
-            
-
-
+            $('#boton-mas').attr('disabled', false);
+            $('#boton-guardar').attr('disabled', false);
         }
     });
 });
