@@ -113,7 +113,7 @@ $(document).ready(function() {
             $(this).find('td').each(function() {
                 if ($(this).text().toLowerCase().includes(textoBusqueda)) {
                     coincide = true;
-                    return false; // Sale del bucle each() interno
+                    return false; 
                 }
             });
             if (coincide) {
