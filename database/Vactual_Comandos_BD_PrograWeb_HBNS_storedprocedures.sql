@@ -534,6 +534,42 @@ BEGIN
     END
 END
 
+CREATE PROCEDURE [dbo].[GestionMembresias]
+    @Option VARCHAR(10) = NULL,
+    @ID_membresia INT = NULL,
+    @Nomenclatura char(6) = NULL,
+    @Descripcion VARCHAR(255) = NULL,
+    @Costo DECIMAL(10,2) = NULL,
+    @Duracion INT = NULL
+AS
+BEGIN
+    IF @Option = 'SELECT'
+    BEGIN
+        SELECT *
+        FROM Membresia
+    END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        INSERT INTO Membresia(Nomenclatura, Descripcion, Costo, Duracion)
+        VALUES (@Nomenclatura, @Descripcion, @Costo, @Duracion);
+    END
+    ELSE IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE Membresia
+        SET Nomenclatura = @Nomenclatura,
+            Descripcion = @Descripcion,
+            Costo = @Costo,
+            Duracion = @Duracion
+        WHERE ID_membresia = @ID_membresia;
+    END
+    ELSE IF @Option = 'DELETE'
+    BEGIN
+        DELETE FROM Membresia
+        WHERE ID_membresia = @ID_membresia;
+    END
+END
+
+
 
 
 
@@ -598,3 +634,7 @@ INSERT INTO RegistroChat VALUES (2,1, 'Bien tambien, gracias', GETDATE())
 INSERT INTO RegistroChat VALUES (1,2, 'Parece que si', GETDATE())
 
 select * from Rol
+
+select * from Membresia
+
+INSERT INTO Membresia VALUES ('HipHop', 'Membresia de HipHop 3 clases a la semana', 130.50, 30)

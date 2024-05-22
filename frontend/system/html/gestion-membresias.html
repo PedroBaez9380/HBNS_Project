@@ -30,10 +30,11 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-sm-12 gestion-membresias p-5 ">
                     <div class="d-flex flex-column align-items-start campos text-start">
-                            <div><h6>Nomenclatura</h6><textarea class="form-control" id="membresia" rows="1" disabled></textarea></div>
+                            <div><h6>ID_membresia</h6><textarea class="form-control" id="ID-membresia" rows="1" disabled></textarea></div>
+                            <div><h6>Nomenclatura</h6><textarea class="form-control" id="nomenclatura" rows="1" disabled></textarea></div>
                             <div><h6>Descripcion</h6><textarea class="form-control" id="descripcion" rows="1" disabled></textarea></div>
-                            <div><h6>Costo</h6><textarea class="form-control" id="cost" rows="1" disabled></textarea></div>
-                            <div><h6>Duracion</h6><textarea class="form-control" id="Duracion" rows="2" disabled></textarea></div>
+                            <div><h6>Costo</h6><textarea class="form-control" id="costo" rows="1" disabled></textarea></div>
+                            <div><h6>Duracion</h6><textarea class="form-control" id="duracion" rows="1" disabled></textarea></div>
                     </div>
                     <div class="tabla-articulos-input">
                         <input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
@@ -43,6 +44,7 @@
                         <table class="table">
                             <thead>
                                 <tr>
+                                    <th scope="col">ID_membresia</th>
                                     <th scope="col">Nomenclatura</th>
                                     <th scope="col">Descripcion</th>
                                     <th scope="col">Costo</th>
@@ -67,12 +69,12 @@
                     </div>   
                     <div class="botones text-center">
                         <div>
-                            <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
-                            <button type="button" class="btn btn-rounded btn-secondary">Modificacion</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" id="boton-guardar">Guardar</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" id="boton-modificacion">Modificacion</button>
                         </div>
                         <div class="d-inline-block">
-                            <button type="button" class="btn btn-rounded btn-light">Eliminar</button>
-                            <button type="button" class="btn btn-rounded btn-light">Nuevo</button>
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-eliminar">Eliminar</button>
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-nuevo">Nuevo</button>
                         </div>
                     </div>
                 </div> 
@@ -86,5 +88,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/gestion-membresias.js"></script>
 </body>
 </html>
