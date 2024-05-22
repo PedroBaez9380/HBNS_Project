@@ -14,8 +14,6 @@ $(document).ready(function() {
             var horaFinal = clase.Hora_final.slice(0, 5); 
             var dia = clase.DescripcionDia;
             var descripcionClase = clase.NombreClase;
-    
-            // Agregamos una nueva fila a la tabla para cada clase
             $('#tabla-horario tbody').append(`
                 <tr>
                     <th>${horaInicio} - <br> ${horaFinal}</th>
@@ -29,7 +27,6 @@ $(document).ready(function() {
                 </tr>
             `);
     
-            // Insertamos el nombre de la clase en la celda correspondiente al día
             var cell = $('#tabla-horario tbody tr:last-child .' + dia);
             cell.text(descripcionClase);
         });

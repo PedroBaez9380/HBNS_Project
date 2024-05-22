@@ -18,7 +18,7 @@ namespace ApiHBNS.Controllers
 
         [HttpGet]
         [Route("Traer/{ID_usuario}")]
-        public IActionResult ObtenerUsuarios(int ID_usuario)
+        public IActionResult ObtenerUsuarios(int? ID_usuario)
         {
             try
             {
@@ -53,36 +53,90 @@ namespace ApiHBNS.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("TraerTodosUsuarios")]
+        public IActionResult ObtenerTodosUsuarios()
+        {
+            try
+            {
+
+                DataTable tUsuario = DBDatos.Listar("TraerTodosUsuarios");
+
+                var usuariosList = new List<Dictionary<string, object>>();
+                foreach (DataRow row in tUsuario.Rows)
+                {
+                    var dict = new Dictionary<string, object>();
+                    foreach (DataColumn col in tUsuario.Columns)
+                    {
+                        dict[col.ColumnName] = row[col];
+                    }
+                    usuariosList.Add(dict);
+                }
+
+                string jsonUsuarios = JsonSerializer.Serialize(usuariosList);
+
+                return Ok(new { Usuarios = usuariosList });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
 
         [HttpPost]
         [Route("Guardar")]
         public dynamic GuardarUsuario(Usuarios Usuarios)
         {
-
-            List<Parametro> parametros = new List<Parametro>
+            try
             {
-                new Parametro("@Option", "INSERT"),
-                new Parametro("@ID_tipo_usuario", Usuarios.ID_tipo_usuario.ToString()),
-                new Parametro("@Contrasena", Usuarios.Contrasena),
-                new Parametro("@Nombre", Usuarios.Nombre),
-                new Parametro("@Apellido", Usuarios.Apellido),
-                new Parametro("@Telefono", Usuarios.Telefono),
-                new Parametro("@Correo", Usuarios.Correo),
-                new Parametro("@Fecha_registro", Usuarios.Fecha_registro),
-                new Parametro("@Fecha_nacimiento", Usuarios.Fecha_nacimiento), 
-                new Parametro("@ID_membresia", Usuarios.ID_membresia?.ToString()),
-                new Parametro("@Estado", Usuarios.Estado.ToString()),
-            };
+                List<Parametro> parametros = new List<Parametro>
+        {
+            new Parametro("@Option", "INSERT"),
+            new Parametro("@ID_tipo_usuario", Usuarios.ID_tipo_usuario.ToString()),
+            new Parametro("@Contrasena", Usuarios.Contrasena),
+            new Parametro("@Nombre", Usuarios.Nombre),
+            new Parametro("@Apellido", Usuarios.Apellido),
+            new Parametro("@Telefono", Usuarios.Telefono),
+            new Parametro("@Correo", Usuarios.Correo),
+            new Parametro("@Fecha_registro", Usuarios.Fecha_registro),
+            new Parametro("@Fecha_nacimiento", Usuarios.Fecha_nacimiento),
+            new Parametro("@ID_membresia", Usuarios.ID_membresia?.ToString()),
+            new Parametro("@Estado", Usuarios.Estado.ToString()),
+        };
 
-            dynamic result = DBDatos.Ejecutar("GestionUsuario", parametros);
+                dynamic result = DBDatos.Ejecutar("GestionUsuario", parametros);
 
-            return new
+                if (result.exito)
+                {
+                    return new
+                    {
+                        success = true,
+                        message = "Usuario guardado exitosamente",
+                        result = result
+                    };
+                }
+                else
+                {
+                    return new
+                    {
+                        success = false,
+                        message = "Hubo un error al guardar el usuario",
+                        result = result
+                    };
+                }
+            }
+            catch (Exception ex)
             {
-                success = result.exito.ToString(),
-                message = result.mensaje,
-                result = ""
-            };
+                return new
+                {
+                    success = false,
+                    message = "Hubo un error interno al procesar la solicitud",
+                    error = ex.Message
+                };
+            }
         }
+
 
         [HttpPut]
         [Route("Actualizar")]
@@ -98,7 +152,6 @@ namespace ApiHBNS.Controllers
                 new Parametro("@Apellido", Usuarios.Apellido),
                 new Parametro("@Telefono", Usuarios.Telefono),
                 new Parametro("@Correo", Usuarios.Correo),
-                new Parametro("@Fecha_registro", Usuarios.Fecha_registro), 
                 new Parametro("@Fecha_nacimiento", Usuarios.Fecha_nacimiento),
                 new Parametro("@ID_membresia", Usuarios.ID_membresia?.ToString()),
                 new Parametro("@Estado", Usuarios.Estado.ToString()),

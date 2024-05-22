@@ -2,7 +2,6 @@
 {
     public class Usuarios
     {
-        public string Option { get; set; }
         public int? ID_usuario { get; set; }
         public int? ID_tipo_usuario { get; set; }
         public string? Contrasena { get; set; }

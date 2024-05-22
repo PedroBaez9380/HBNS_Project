@@ -362,6 +362,35 @@ BEGIN
     END
 END
 
+CREATE PROCEDURE [dbo].[GestionTipoUsuario]
+	@Option VARCHAR(10),
+    @ID_tipo_usuario INT = NULL,
+	@Descripcion VARCHAR(50) = NULL
+AS
+BEGIN
+	IF @Option = 'SELECT'
+            BEGIN
+                SELECT *
+                FROM TipoUsuario
+            END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        INSERT INTO TipoUsuario (Descripcion)
+        VALUES (@Descripcion);
+    END
+    ELSE IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE TipoUsuario
+        SET 
+            Descripcion = @Descripcion
+        WHERE ID_tipo_usuario = @ID_tipo_usuario
+    END
+	ELSE IF @Option = 'DELETE'
+	BEGIN
+		DELETE FROM TipoUsuario
+		WHERE ID_tipo_usuario = @ID_tipo_usuario
+	END
+END
 
 CREATE PROCEDURE [dbo].[GestionUsuario]
     @Option VARCHAR(10),
@@ -379,11 +408,11 @@ CREATE PROCEDURE [dbo].[GestionUsuario]
 AS
 BEGIN
     IF @Option = 'SELECT'
-    BEGIN
-        SELECT *
-        FROM Usuario
-        WHERE ID_usuario = @ID_usuario;
-    END
+            BEGIN
+                SELECT *
+                FROM Usuario
+                WHERE ID_usuario = @ID_usuario;
+            END
     ELSE IF @Option = 'INSERT'
     BEGIN
         INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado)
@@ -399,12 +428,19 @@ BEGIN
             Apellido = @Apellido,
             Telefono = @Telefono,
             Correo = @Correo,
-            Fecha_registro = @Fecha_registro,
             Fecha_nacimiento = @Fecha_nacimiento,
             ID_membresia = @ID_membresia,
             Estado = @Estado
         WHERE ID_usuario = @ID_usuario;
     END
+END
+
+CREATE PROCEDURE [dbo].[TraerTodosUsuarios]
+AS
+BEGIN
+    SELECT U.*, TU.Descripcion AS TipoUsuarioDescripcion
+    FROM Usuario U
+    LEFT JOIN TipoUsuario TU ON U.ID_tipo_usuario = TU.ID_tipo_usuario;
 END
 
 CREATE PROCEDURE [dbo].[TraerDiaSemana]
@@ -491,3 +527,7 @@ select * from usuario
 select * from TipoUsuario
 
 EXEC GestionUsuario 'INSERT', NULL, 1, 'zac', 'Pedro Alberto', 'Baez Najera', '8128644703', 'pedro.baeznjr@uanl.edu.mx', '2024-05-19', '2004-04-27', NULL, 1
+
+EXEC GestionUsuario 'SELECT', NULL;
+
+EXEC GestionTipoUsuario 'SELECT'
