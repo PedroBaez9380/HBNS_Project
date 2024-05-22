@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('#id-usuario').on('keydown', function(e) {
         if (e.which === 13) { // Código de tecla 13 es Enter
             var userID = $('#id-usuario').val()
+            $('#id-usuario').attr('disabled', true)
 
             e.preventDefault();
             $('.check').removeAttr('disabled');
@@ -47,11 +48,12 @@ $(document).ready(function() {
         }).done(function (result) {
             alert("Guardado exitoso!");
             $('.check').attr('disabled', true);
-
+            $('#id-usuario').attr('disabled', false)
+            $('#id-usuario').val("")
             //Desactivar los checks
             document.querySelectorAll('#roles input[type="checkbox"]').forEach(checkbox => checkbox.checked = false);
 
-
+            $('#id-usuario').attr('disabled', false)
         }).fail(function (xhr, status, error) {
             alert("Hubo un problema al guardar: " + error + "\nStatus: " + status);
             console.error(xhr);
