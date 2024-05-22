@@ -32,38 +32,20 @@
                         <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
                     </div>
                     <div id="usuarios-traer">
-                        <p>Usuario 1</p>
-                        <p>Usuario 2</p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-8 m-3 chat-mensajes px-0">
-                    <div id="usuario-actual">
-                        <p>Usuario1</p>
+                    <div>
+                        <h4 id="usuario-actual">Selecciona usuario</h4>
                     </div>
                     <div id="todos-mensajes">
-                        <div class="mensaje-receptor">
-                            <div class="mensaje">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, cum, corrupti nesciunt rerum sed fugit voluptatum officiis ratione quas esse suscipit. Dolores laborum dolorum beatae, maiores maxime quaerat officia laudantium ab, ipsum molestiae ex doloremque rerum quis consequuntur provident non ipsa perspiciatis a officiis reprehenderit. Consequuntur delectus ea velit voluptatibus ipsam tenetur natus aliquam voluptatem iusto esse minima nostrum, quia in quod amet iste laboriosam nihil beatae. Voluptate at, pariatur ea ipsam maxime et iste, sapiente aut sit sed inventore, fuga incidunt quam nesciunt culpa consectetur! Quam optio eius laboriosam, nulla debitis unde quaerat, error voluptatibus corrupti dolorem facilis voluptatem!
-                            </div>
-                            
-                            <div class="hora-fecha">
-                                10:10 AM 15/05/2024
-                            </div>
-                        </div>
-                        <div class="mensaje-emisor">
-                            <div class="mensaje">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae aspernatur quasi itaque corrupti aliquid recusandae provident error repellat nulla, maxime ab sequi at adipisci animi laudantium eos ipsam voluptatibus dignissimos accusantium quos laboriosam expedita minima nemo ut. Temporibus hic repudiandae ut ullam? Consectetur, voluptates ipsa inventore tempora magni officia! Quis.
-                            </div>
-                            <div class="hora-fecha">
-                                10:10 AM 15/05/2024
-                            </div>
-                            
-                        </div>
+                        <h1 class="m-4 text-center">Selecciona un chat para comenzar a hablar!</h1>
                     </div>
 
                     <div id="area-escribir-mensaje">
-                        <input type="text" class="form-control" placeholder="mensaje" aria-label="mensaje" aria-describedby="basic-addon2" id="mensaje">
-                        <button type="button" class="btn btn-primary btn-enviar"><img src="../images/enviar-mensaje.png" alt=""></button>
+                        <input type="text" class="form-control" placeholder="mensaje" aria-label="mensaje" aria-describedby="basic-addon2" id="mensaje-escribir" disabled>
+                        <button type="button" class="btn btn-primary btn-enviar" id="btn-enviar" disabled><img src="../images/enviar-mensaje.png" alt=""></button>
                     </div>
                 </div>
 
@@ -81,5 +63,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/chat.js"></script>
 </body>
 </html>

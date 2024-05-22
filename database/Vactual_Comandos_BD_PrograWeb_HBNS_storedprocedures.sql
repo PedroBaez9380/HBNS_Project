@@ -49,11 +49,11 @@ CREATE TABLE AsignacionRol (
 exec sp_help AsignacionRol;
 
 CREATE TABLE RegistroChat (
+	ID_registro INT PRIMARY KEY IDENTITY(1,1) not null,
     ID_usuario_emisor INT FOREIGN KEY REFERENCES Usuario(ID_usuario) not null,
     ID_usuario_receptor INT FOREIGN KEY REFERENCES Usuario(ID_usuario) not null,
     Mensaje VARCHAR(MAX) not null,
     Fecha_envio DATETIME not null,
-	CONSTRAINT PK_usuarios_chat PRIMARY KEY (ID_usuario_emisor, ID_usuario_receptor),
 );
 
 exec sp_help RegistroChat;
@@ -478,7 +478,35 @@ BEGIN
     END
 END
 
+CREATE PROCEDURE [dbo].[GestionChat]
+	@Option VARCHAR(10),
+	@ID_usuario_actual INT = null,
+	@ID_usuario_seleccionado INT = null,
+	@Mensaje VARCHAR(MAX) = null,
+	@Fecha_envio DATETIME = null
+AS
+BEGIN
+	IF @Option = 'SELECT'
+    BEGIN
+        SELECT Mensaje, Fecha_envio, 'Enviado' AS TipoMensaje
+        FROM RegistroChat
+        WHERE ID_usuario_emisor = @ID_usuario_actual AND ID_usuario_receptor = @ID_usuario_seleccionado
+        UNION ALL
+        
+        SELECT Mensaje, Fecha_envio, 'Recibido' AS TipoMensaje
+        FROM RegistroChat
+        WHERE ID_usuario_emisor = @ID_usuario_seleccionado AND ID_usuario_receptor = @ID_usuario_actual
+        ORDER BY Fecha_envio;
+    END
+    ELSE IF @Option = 'INSERT'
+    BEGIN
+        
+        INSERT INTO RegistroChat (ID_usuario_emisor, ID_usuario_receptor, Mensaje, Fecha_envio)
+        VALUES (@ID_usuario_actual, @ID_usuario_seleccionado, @Mensaje, @Fecha_envio);
+    END
+END
 
+EXEC GestionChat 'SELECT', 2, 1
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -531,3 +559,9 @@ EXEC GestionUsuario 'INSERT', NULL, 1, 'zac', 'Pedro Alberto', 'Baez Najera', '8
 EXEC GestionUsuario 'SELECT', NULL;
 
 EXEC GestionTipoUsuario 'SELECT'
+
+select * from RegistroChat
+
+INSERT INTO RegistroChat VALUES (2,1, 'Hola, como estas?', GETDATE())
+INSERT INTO RegistroChat VALUES (1,2, 'Bien bien, como estas tu?', GETDATE())
+INSERT INTO RegistroChat VALUES (2,1, 'Bien tambien, gracias', GETDATE())

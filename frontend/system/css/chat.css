@@ -9,9 +9,16 @@
     width: 100%;
 }
 
-#usuarios-traer p {
-    margin: 10px 0px 10px 0px;
+#usuarios-traer button {
+    margin: 10px 30px 10px 30px;
     padding-left: 10px;
+}
+
+#usuarios-traer {
+    display: flex;
+    flex-direction: column;
+    max-height: 650px;
+    overflow-y: auto;
 }
 
 #usuario-actual {
@@ -30,10 +37,10 @@
 
 #usuario-actual {
     display: flex;
-
     align-content: center;
     justify-content: center;
     text-align: center;
+    height: 30px;
 }
 
 .chat-mensajes {
@@ -63,7 +70,8 @@
 }
 
 #todos-mensajes {
-    max-height: 500px;
+    height: 100%;
+    max-height: 594px;
     overflow-y: auto;
 }
 
