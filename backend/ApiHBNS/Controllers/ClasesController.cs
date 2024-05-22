@@ -11,7 +11,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("Clases")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class ClasesConroller : ControllerBase
+    public class ClasesController : ControllerBase
     {
         [HttpGet]
         [Route("Traer")]

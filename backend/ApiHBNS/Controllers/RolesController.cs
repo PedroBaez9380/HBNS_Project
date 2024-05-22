@@ -4,14 +4,15 @@ using System.Data;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Web.Http.Cors;
+
 using ApiHBNS.Models;
 
 namespace ApiHBNS.Controllers
 {
     [ApiController]
-    [Route("AsignacionHorarios")]
+    [Route("Roles")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class AsignacionHorariosController : ControllerBase
+    public class RolesController : ControllerBase
     {
         [HttpGet]
         [Route("Traer/{ID_usuario}")]
@@ -19,29 +20,28 @@ namespace ApiHBNS.Controllers
         {
             try
             {
-
                 List<Parametro> parametros = new List<Parametro>
                 {
                     new Parametro("@Option", "SELECT"),
-                    new Parametro("@ID_usuario", @ID_usuario.ToString())
+                    new Parametro("@ID_usuario", @ID_usuario.ToString()),
                 };
 
-                DataTable tAsignacionUsuario = DBDatos.Listar("GestionAsignacionesHorarios", parametros);
+                DataTable tRoles = DBDatos.Listar("GestionRol", parametros);
 
-                var ClasesList = new List<Dictionary<string, object>>();
-                foreach (DataRow row in tAsignacionUsuario.Rows)
+                var RolesList = new List<Dictionary<string, object>>();
+                foreach (DataRow row in tRoles.Rows)
                 {
                     var dict = new Dictionary<string, object>();
-                    foreach (DataColumn col in tAsignacionUsuario.Columns)
+                    foreach (DataColumn col in tRoles.Columns)
                     {
                         dict[col.ColumnName] = row[col];
                     }
-                    ClasesList.Add(dict);
+                    RolesList.Add(dict);
                 }
 
-                string jsonUsuarios = JsonSerializer.Serialize(ClasesList);
+                string jsonUsuarios = JsonSerializer.Serialize(RolesList);
 
-                return Ok(new { Clases = ClasesList });
+                return Ok(new { Mensajes = RolesList });
             }
             catch (Exception ex)
             {
@@ -49,28 +49,27 @@ namespace ApiHBNS.Controllers
             }
         }
 
+
         [HttpPost]
         [Route("Guardar")]
-        public dynamic GuardarAsignacionHorario(AsignacionHorarios AsignacionHorarios)
+        public dynamic GuardarQuejas(Roles Roles)
         {
-            string idHorarios = string.Join(",", AsignacionHorarios.ID_horarios);
-
             List<Parametro> parametros = new List<Parametro>
             {
-                new Parametro("@Option", AsignacionHorarios.Option.ToString()),
-                new Parametro("@ID_usuario", AsignacionHorarios.ID_usuario.ToString()),
-                new Parametro("@ID_horarios", idHorarios)
+                new Parametro("@Option","INSERT"),
+                new Parametro("@ID_usuario", Roles.ID_usuario),
+                new Parametro("@ID_rol", Roles.ID_rol),
             };
 
-            dynamic result = DBDatos.Ejecutar("GestionAsignacionesHorarios", parametros);
+            dynamic result = DBDatos.Ejecutar("GestionRol", parametros);
 
             return new
             {
-                success = result.exito.ToString(),
+                success = result.exito,
                 message = result.mensaje,
                 result = ""
             };
+
         }
     }
 }
-

@@ -14,7 +14,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("Login")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class LoginConroller : ControllerBase
+    public class LoginController : ControllerBase
     {
         [HttpPost]
         [Route("Listar")]

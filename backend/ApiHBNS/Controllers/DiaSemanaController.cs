@@ -11,7 +11,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("DiaSemana")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class DiaSemanaConroller : ControllerBase
+    public class DiaSemanaController : ControllerBase
     {
         [HttpGet]
         [Route("Traer")]

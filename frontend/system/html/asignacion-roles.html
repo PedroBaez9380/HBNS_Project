@@ -30,37 +30,32 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8 asignacion-rol d-flex flex-column align-items-center">
                     <div class="abreviatura d-flex flex-column align-items-center m-3">
-                        <h6>Numero de usuario</h6> <textarea class="form-control" id="telefono" rows="1" disabled></textarea>
+                        <h6>Numero de usuario</h6> <textarea class="form-control" id="id-usuario" rows="1"></textarea>
                     </div>
-                    <div class="descripcion d-flex flex-column align-items-center m-3">
-                        <h6>Rol</h6>
-                        <select id="lstRoles" name="lstRoles" class="form-select" disabled>
-                            <option selected value="">Seleccionar opcion</option>
-                        </select>
-                    </div>
-                    <div class="tabla-asignaciones text-center">
-                            <table class="table mx-auto w-100">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">ID de usuario</th>
-                                        <th scope="col">Rol</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla-cuerpo">
-                                    <tr>
-                                        <td>nn</td>
-                                        <td>nn</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    
+                    <div class="container-asignaciones text-center">
+                        <h3>Roles</h3>
+                        <div id="roles-container">
+                            <div id="roles">
+                              <label><input type="checkbox" value="1" disabled class="check"> <span>Maestro</span></label>
+                              <label><input type="checkbox" value="2" disabled class="check"> <span>Alumno</span></label>
+                              <label><input type="checkbox" value="3" disabled class="check"> <span>Administrador de usuarios</span></label>
+                              <label><input type="checkbox" value="4" disabled class="check"> <span>Administrador de roles</span></label>
+                              <label><input type="checkbox" value="5" disabled class="check"> <span>Coordinador academico</span></label>
+                              <label><input type="checkbox" value="6" disabled class="check"> <span>Administrador academico</span></label>
+                              <label><input type="checkbox" value="7" disabled class="check"> <span>Compras</span></label>
+                              <label><input type="checkbox" value="8" disabled class="check"> <span>Administrador de compras</span></label>
+                              <label><input type="checkbox" value="9" disabled class="check"> <span>Ventas</span></label>
+                              <label><input type="checkbox" value="10" disabled class="check"> <span>Administrador de ventas</span></label>
+                              <label><input type="checkbox" value="11" disabled class="check"> <span>Finanzas</span></label>
+                              <label><input type="checkbox" value="12" disabled class="check"> <span>Administrador de Finanzas</span></label>
+                              <label><input type="checkbox" value="13" disabled class="check"> <span>Reporte de finanzas</span></label>
+                            </div>
+                        </div> 
                     </div>
                     <div class="botones text-center">
                         <div>
-                            <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
-                        </div>
-                        <div class="d-inline-block">
-                            <button type="button" class="btn btn-rounded btn-light">Eliminar</button>
-                            <button type="button" class="btn btn-rounded btn-light">Nuevo</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" disabled id="boton-guardar">Guardar</button>
                         </div>
                     </div>
                 </div>
@@ -73,5 +68,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/asignacion-roles.js"></script>
 </body>
 </html>

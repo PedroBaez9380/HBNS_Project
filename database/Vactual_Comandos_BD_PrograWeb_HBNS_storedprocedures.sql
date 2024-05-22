@@ -273,6 +273,34 @@ BEGIN
 END
 GO
 
+CREATE PROCEDURE [dbo].[GestionRol]
+    @Option VARCHAR(10) = NULL,
+	@ID_usuario INT ,
+    @ID_rol VARCHAR(MAX) = NULL
+AS
+BEGIN
+	IF @Option = 'SELECT'
+	BEGIN
+		SELECT * FROM AsignacionRol
+		WHERE ID_usuario = @ID_usuario;
+	END
+
+	IF @Option = 'INSERT'
+	BEGIN
+		DELETE FROM AsignacionRol
+		WHERE ID_usuario = @ID_usuario;
+
+		DECLARE @RolTabla TABLE (ID_rol INT);
+
+		INSERT INTO @RolTabla (ID_rol)
+		SELECT CAST(value AS INT) FROM STRING_SPLIT(@ID_rol, ',');
+
+		INSERT INTO AsignacionRol (ID_usuario, ID_rol)
+		SELECT @ID_usuario, ID_rol
+		FROM @RolTabla;
+	END
+END
+
 
 
 CREATE PROCEDURE [dbo].[ObtenerRolesPorUsuario]
@@ -506,7 +534,8 @@ BEGIN
     END
 END
 
-EXEC GestionChat 'SELECT', 2, 1
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -565,3 +594,7 @@ select * from RegistroChat
 INSERT INTO RegistroChat VALUES (2,1, 'Hola, como estas?', GETDATE())
 INSERT INTO RegistroChat VALUES (1,2, 'Bien bien, como estas tu?', GETDATE())
 INSERT INTO RegistroChat VALUES (2,1, 'Bien tambien, gracias', GETDATE())
+
+INSERT INTO RegistroChat VALUES (1,2, 'Parece que si', GETDATE())
+
+select * from Rol

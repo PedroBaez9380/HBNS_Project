@@ -12,7 +12,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("QuejasSugerencias")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class QuejasSugerenciasConroller : ControllerBase
+    public class QuejasSugerenciasController : ControllerBase
     {
         [HttpGet]
         [Route("Listar")]

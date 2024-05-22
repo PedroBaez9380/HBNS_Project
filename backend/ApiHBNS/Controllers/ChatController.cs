@@ -13,7 +13,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("Chats")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class ChatConroller : ControllerBase
+    public class ChatController : ControllerBase
     {
 
         [HttpGet]

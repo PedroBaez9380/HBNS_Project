@@ -11,7 +11,7 @@ namespace ApiHBNS.Controllers
     [ApiController]
     [Route("TipoUsuarios")]
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class TipoUsuariosConroller : ControllerBase
+    public class TipoUsuariosController : ControllerBase
     {
 
         [HttpGet]
