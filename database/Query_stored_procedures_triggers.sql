@@ -201,22 +201,22 @@ CREATE PROCEDURE [dbo].[GestionTipoUsuario]
 AS
 BEGIN
 	IF @Option = 'SELECT'
-            BEGIN
-                SELECT *
-                FROM TipoUsuario
-            END
+		BEGIN
+			SELECT *
+			FROM TipoUsuario
+		END
     ELSE IF @Option = 'INSERT'
-    BEGIN
-        INSERT INTO TipoUsuario (Descripcion)
-        VALUES (@Descripcion);
-    END
+		BEGIN
+			INSERT INTO TipoUsuario (Descripcion)
+			VALUES (@Descripcion);
+		END
     ELSE IF @Option = 'UPDATE'
-    BEGIN
-        UPDATE TipoUsuario
-        SET 
-            Descripcion = @Descripcion
-        WHERE ID_tipo_usuario = @ID_tipo_usuario
-    END
+		BEGIN
+			UPDATE TipoUsuario
+			SET 
+				Descripcion = @Descripcion
+			WHERE ID_tipo_usuario = @ID_tipo_usuario
+		END
 	ELSE IF @Option = 'DELETE'
 	BEGIN
 		DELETE FROM TipoUsuario
@@ -488,7 +488,6 @@ BEGIN
     END
 END
 
-DROP PROCEDURE GestionSueldos
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
