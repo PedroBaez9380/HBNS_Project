@@ -509,6 +509,8 @@ exec sp_help EstadoSueldo;
 
 Create database HBNSdb;
 
+Create database HBNSDATABASE
+
 drop database HBNSdb
 
 INSERT INTO QuejasSugerencias (Nombre, Correo, Descripcion, Fecha)
