@@ -240,11 +240,12 @@ CREATE PROCEDURE [dbo].[GestionUsuario]
 AS
 BEGIN
     IF @Option = 'SELECT'
-            BEGIN
-                SELECT *
-                FROM Usuario
-                WHERE ID_usuario = @ID_usuario;
-            END
+        BEGIN
+            SELECT Usuario.*, TipoUsuario.descripcion AS TipoUsuarioDescripcion
+			FROM Usuario
+			JOIN TipoUsuario ON Usuario.ID_tipo_usuario = TipoUsuario.ID_tipo_usuario
+			WHERE Usuario.ID_usuario = @ID_usuario;
+        END
     ELSE IF @Option = 'INSERT'
     BEGIN
         INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado)
@@ -266,6 +267,7 @@ BEGIN
         WHERE ID_usuario = @ID_usuario;
     END
 END
+
 
 CREATE PROCEDURE [dbo].[TraerTodosUsuarios]
 AS

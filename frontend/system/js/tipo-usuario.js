@@ -96,7 +96,7 @@ function traerTiposUsuario() {
             'Content-Type': 'application/json'
         }
     }).done(function (result) {
-         result.result.tiposUsuario.forEach(function(TipoUsuarios) {
+        result.result.tiposUsuario.forEach(function(TipoUsuarios) {
             var ID_tipo_usuario = TipoUsuarios.iD_tipo_usuario;
             var descripcion = TipoUsuarios.descripcion;
         
