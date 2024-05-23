@@ -40,8 +40,9 @@
 
 /* Estilos de consultar horarios */
 
-.texto-consultar-horarios {
+.texto-consultar-horarios, .select {
     margin-bottom: 25px;
+    margin-left: 30px;
 }
 
 #horarios > div {
@@ -54,5 +55,13 @@
 #horarios > div > p {
     text-align: center;
     margin: 0;
+}
+
+#lstClases {
+    width: 300px;
+}
+
+#horarios > h4 {
+    margin-left: 30px;
 }
 

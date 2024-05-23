@@ -60,7 +60,7 @@ namespace ApiHBNS.Controllers
             {
                 new Parametro("@Option", "INSERT"),
                 new Parametro("Descripcion", TipoUsuarios.Descripcion)
-                
+
             };
 
             dynamic result = DBDatos.Ejecutar("GestionTipoUsuario", parametros);
