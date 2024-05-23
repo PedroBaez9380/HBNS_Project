@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\subirarchivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\subirarchivoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\sueldoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\sueldoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,11 +22,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SubirArchivosController.cs",
+              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\SubirArchivosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SubirArchivosController.cs",
+              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\SubirArchivosController.cs",
+              "RelativeToolTip": "Controllers\\SubirArchivosController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAowDEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T07:09:36.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Sueldos.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\Sueldos.cs",
               "RelativeDocumentMoniker": "Models\\Sueldos.cs",
@@ -30,12 +47,11 @@
               "RelativeToolTip": "Models\\Sueldos.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T04:25:02.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-23T04:25:02.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "SueldosController.cs",
               "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\SueldosController.cs",
               "RelativeDocumentMoniker": "Controllers\\SueldosController.cs",

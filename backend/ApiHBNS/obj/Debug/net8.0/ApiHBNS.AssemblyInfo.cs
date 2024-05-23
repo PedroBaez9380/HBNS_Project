@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ApiHBNS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70c29a4896b43256db698a009da801923836f6e9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b8ff3cd67bb7bf9115bdff0c96d43ef18e6227f")]
 [assembly: System.Reflection.AssemblyProductAttribute("ApiHBNS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ApiHBNS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

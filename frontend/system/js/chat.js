@@ -70,6 +70,26 @@ $(document).ready(function() {
         });
     });
 
+    $('#buscar-usuarios').on('input', function() {
+        var textoBusqueda = $(this).val().toLowerCase();
+        
+        $('#usuarios-traer button').each(function() {
+            var textoBoton = $(this).text().toLowerCase();
+            
+            if (textoBoton.includes(textoBusqueda)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+        
+        // Si no hay texto de búsqueda, mostrar todos los botones
+        if (textoBusqueda === '') {
+            $('#usuarios-traer button').show();
+        }
+    });
+    
+
 });
 
 // Traer los mensajes 
