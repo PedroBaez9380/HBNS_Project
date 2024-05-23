@@ -8,7 +8,7 @@
         public string? Fecha_vencimiento { get; set; }
         public bool? Estatus { get; set; }
 
-        public string TipoMembresia {  get; set; }
+        public string? TipoMembresia {  get; set; }
     }
 }
 

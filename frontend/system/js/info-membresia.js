@@ -30,14 +30,13 @@ function traerdatos(userID) {
         crossDomain: true
     }).done(function (result) {
         if (result.asignacion.length > 0) {
-            // Membresía más reciente
+
             var membresiaReciente = result.asignacion[1];
             $("#tipo-membresia").text(membresiaReciente.TipoMembresia);
             $("#fecha-inicio-actual").text(new Date(membresiaReciente.Fecha_inicio).toLocaleDateString());
             $("#fecha-vencimiento-actual").text(new Date(membresiaReciente.Fecha_vencimiento).toLocaleDateString());
             $("#estatus-membresia-actual").text(membresiaReciente.Estatus ? "Pagado" : "No pagado");
 
-            // Si hay una segunda membresía, mostrarla como la siguiente membresía
             if (result.asignacion.length > 1) {
                 var membresiaSiguiente = result.asignacion[0];
                 $("#tipo-membresia-siguiente").text(membresiaSiguiente.TipoMembresia);
@@ -51,7 +50,7 @@ function traerdatos(userID) {
             $(".seccion-info-membresia").hide();
         }
     }).fail(function (xhr, status, error) {
-        alert("Hubo un problema al traer los horarios: " + error + "\nStatus: " + status);
+        alert("Hubo un problema al traer las membresias: " + error + "\nStatus: " + status);
         console.error(xhr);
     });
 }

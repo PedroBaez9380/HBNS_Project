@@ -9,10 +9,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\models\\estadomembresia .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:models\\estadomembresia .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|c:\\users\\pedro\\onedrive - universidad autonoma de nuevo le\u00F3n\\clases sexto semestre\\lab progra web\\proyecto\\fase3\\repositorio\\hbns_project\\backend\\apihbns\\controllers\\asignacionmembresiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7C544291-F25E-410C-BD54-8ECBF97B096A}|ApiHBNS.csproj|solutionrelative:controllers\\asignacionmembresiascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AsignacionMembresiasController.cs",
-              "DocumentMoniker": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\AsignacionMembresiasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AsignacionMembresiasController.cs",
-              "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\AsignacionMembresiasController.cs",
-              "RelativeToolTip": "Controllers\\AsignacionMembresiasController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T01:44:57.368Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,7 +28,7 @@
               "RelativeDocumentMoniker": "Controllers\\EstadoMembresiaController.cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Controllers\\EstadoMembresiaController.cs",
               "RelativeToolTip": "Controllers\\EstadoMembresiaController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAwwD4AAABNAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAwwDoAAAAzAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T23:47:06.889Z",
               "EditorCaption": ""
@@ -58,7 +41,7 @@
               "RelativeDocumentMoniker": "Models\\EstadoMembresia .cs",
               "ToolTip": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo Le\u00F3n\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\Models\\EstadoMembresia .cs",
               "RelativeToolTip": "Models\\EstadoMembresia .cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAoAAAAyAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-22T23:47:43.214Z",
               "EditorCaption": ""
