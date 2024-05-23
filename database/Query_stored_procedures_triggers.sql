@@ -429,27 +429,28 @@ END;
 CREATE PROCEDURE [dbo].[TraerInfoMembresia]
     @Option VARCHAR(10),
     @ID_usuario INT,
-	@ID_membresia INT,
-	@Fecha_inicio DATE,
-    @Estado BIT = NULL
+	@ID_membresia INT = null,
+	@Fecha_inicio DATE = null,
+    @Estatus BIT = NULL
 AS
 BEGIN
     IF @Option = 'SELECT'
 	BEGIN
-		SELECT * FROM EstadoMembresia
-		WHERE ID_usuario = @ID_usuario AND
-		ID_membresia = @ID_membresia AND
-		Fecha_inicio = @Fecha_inicio
+		SELECT TOP 2 EM.*, M.Nomenclatura AS TipoMembresia
+		FROM EstadoMembresia EM
+		INNER JOIN Membresia M ON EM.ID_membresia = M.ID_membresia
+		WHERE EM.ID_usuario = @ID_usuario
+		ORDER BY EM.Fecha_inicio DESC 
 	END
 	IF @Option = 'UPDATE'
 	BEGIN
-		UPDATE EstadoMembresia SET Estado = @Estado 
+		UPDATE EstadoMembresia SET Estatus = @Estatus 
 		WHERE ID_usuario = @ID_usuario AND
 		ID_membresia = @ID_membresia AND
 		Fecha_inicio = @Fecha_inicio
 	END
 END
-
+drop procedure TraerInfoMembresia
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------Comandos temporales-----------------------------------------------------------------------------------------------------
@@ -521,3 +522,6 @@ INSERT INTO Membresia VALUES ('HIPHOP', 'Membresia de HipHop 3 clases a la seman
 
 UPDATE Usuario SET ID_membresia = 1003 WHERE ID_usuario = 12;
 
+EXEC TraerInfoMembresia 'SELECT',12,1003,'2024-05-22'
+
+INSERT INTO EstadoMembresia VALUES (1003,12, '2024-06-21', '2024-07-01', 0);

@@ -14,8 +14,8 @@ namespace ApiHBNS.Controllers
     public class EstadoMembresiaController : ControllerBase
     {
         [HttpGet]
-        [Route("Traer/{ID_usuario}/{ID_membresia}/{Fecha_inicio}")]
-        public IActionResult ObtenerEstadoMembresia(int ID_usuario, int ID_membresia, string Fecha_inicio)
+        [Route("Traer/{ID_usuario}")]
+        public IActionResult ObtenerEstadoMembresia(int ID_usuario)
         {
             try
             {
@@ -23,9 +23,7 @@ namespace ApiHBNS.Controllers
                 List<Parametro> parametros = new List<Parametro>
                 {
                     new Parametro("@Option", "SELECT"),
-                    new Parametro("@ID_usuario", @ID_usuario.ToString()),
-                    new Parametro("@ID_membresia", @ID_membresia.ToString()),
-                    new Parametro("@Fecha_inicio", @Fecha_inicio.ToString())
+                    new Parametro("@ID_usuario", @ID_usuario.ToString())
                 };
 
         DataTable tAsignacionMembresia = DBDatos.Listar("TraerInfoMembresia", parametros);

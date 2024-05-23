@@ -38,8 +38,8 @@
     padding-bottom: 100px;
 }
 
-#tipo-membresia , #fecha-inicio-actual, #fecha-inicio-siguiente , #fecha-vencimiento-actual, #fecha-vencimiento-siguiente, #estatus-membresia-actual, #estatus-membresia-siguiente  {
+#tipo-membresia, #tipo-membresia-siguiente, #fecha-inicio-actual, #fecha-inicio-siguiente , #fecha-vencimiento-actual, #fecha-vencimiento-siguiente, #estatus-membresia-actual, #estatus-membresia-siguiente  {
     padding: 3px;
-    background-color: lightgray;
+    background-color: whitesmoke;
     border-radius: 10px;
 }
