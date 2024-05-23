@@ -83,7 +83,7 @@ $(document).ready(function() {
             desHabilitarCampos()
             traerSueldos()
             alert("Guardado exitoso!");
-            
+            uploadFile()
 
         }).fail(function (xhr, status, error) {
             alert("Hubo un problema al guardar: " + error + "\nStatus: " + status);
@@ -208,4 +208,32 @@ function traerSueldos() {
         alert("Hubo un problema al traer los sueldos: " + error + "\nStatus: " + status);
         console.error(xhr);
     });
+}
+
+function uploadFile() {
+    const input = document.getElementById('formFile');
+    const file = input.files[0];
+    
+    if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+        
+        fetch('https://tu-dominio.com/SubirArchivos/Subir', { // Ajusta la URL según tu dominio y puerto
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Archivo guardado en:', data.filePath);
+            // Mostrar la ruta del archivo en el frontend
+            document.getElementById('result').textContent = 'Archivo guardado en: ' + data.filePath;
+        })
+        .catch(error => {
+            console.error('Error al subir el archivo:', error);
+            document.getElementById('result').textContent = 'Error al subir el archivo.';
+        });
+    } else {
+        console.error('No se ha seleccionado ningún archivo.');
+        document.getElementById('result').textContent = 'No se ha seleccionado ningún archivo.';
+    }
 }
