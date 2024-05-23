@@ -5,7 +5,7 @@
     margin-bottom: 20px;
 }
 
-.gestion-sueldos textarea {
+.gestion-sueldos textarea, .gestion-sueldos select {
     width: 100%;
     margin-bottom: 20px;
 }
@@ -13,6 +13,8 @@
 .campos div{
     width: 80%;
 }
+
+
 
 /* Diseños para la parte de la tabla de sueldos */
 

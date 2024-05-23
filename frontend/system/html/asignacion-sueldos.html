@@ -30,19 +30,30 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-sm-12 gestion-sueldos p-5 ">
                     <div class="d-flex flex-column align-items-start campos text-start">
-                            <div><h6>Numero de usuario</h6><textarea class="form-control" id="id-usuario" rows="1" disabled></textarea></div>
-                            <div><h6>Sueldo:</h6><textarea class="form-control" id="sueldo" rows="1" disabled></textarea></div>
+                            <div><h6>ID</h6><textarea class="form-control" id="ID" rows="1" disabled></textarea></div>
+                            <div><h6>Usuario</h6><textarea class="form-control" id="ID_usuario" rows="1" disabled></textarea></div>
+                            <div><h6>Cantidad</h6><textarea class="form-control" id="cantidad" rows="1" disabled></textarea></div>
+                            <div><h6>Fecha Inicio</h6><textarea class="form-control" id="fecha_inicio" rows="1" disabled></textarea></div>
+                            <div><h6>Fecha Fin</h6><textarea class="form-control" id="fecha_fin" rows="1" disabled></textarea></div>
+                            <div><h6>Estado</h6><select name="" id="lstEstatus" class="form-select" disabled> <option value="default" selected>Seleccionar</option> <option value="0">Sin pagar</option> <option value="1">Pagado</option></select></div>
+                            <div><h6>Ruta</h6><textarea class="form-control" id="ruta" rows="1" disabled></textarea></div>
                     </div>
                     <div class="tabla-articulos-input">
-                        <input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2" id="buscar-sueldos">
                     </div>
                     <div class="tabla-sueldos">
                         
-                        <table class="table">
+                        <table class="table" id="tabla-sueldos">
                             <thead>
                                 <tr>
-                                    <th scope="col">N. de usuario</th>
-                                    <th scope="col">Sueldo</th>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Usuario</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Fecha Inicio</th>
+                                    <th scope="col">Fecha Fin</th>
+                                    <th scope="col">Estatus</th>
+                                    <th scope="col">Comprobante</th>
+
                                 </tr>
                             </thead>
                             <tbody id="tabla-cuerpo">
@@ -59,12 +70,12 @@
                     </div>   
                     <div class="botones text-center">
                         <div>
-                            <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
-                            <button type="button" class="btn btn-rounded btn-secondary">Modificacion</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" disabled id="boton-guardar">Guardar</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" disabled id="boton-modificacion">Modificacion</button>
                         </div>
                         <div class="d-inline-block">
-                            <button type="button" class="btn btn-rounded btn-light">Eliminar</button>
-                            <button type="button" class="btn btn-rounded btn-light">Nuevo</button>
+                        
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-nuevo">Nuevo</button>
                         </div>
                     </div>
                 </div> 
@@ -78,5 +89,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/asignacion-sueldo.js"> </script>
 </body>
 </html>

@@ -147,10 +147,10 @@ exec sp_help Horario;
 CREATE TABLE EstadoSueldo (
     ID_estado_sueldo INT PRIMARY KEY IDENTITY(1,1) not null,
     Cantidad_pagar DECIMAL(10, 2) not null,
-    Fecha_inicio DATETIME not null,
-    Fecha_fin DATETIME not null,
-    Estatus CHAR(1) not null,
-    Comprobante_ruta NVARCHAR(255) not null,
+    Fecha_inicio DATE not null,
+    Fecha_fin DATE not null,
+    Estatus BIT not null,
+    Comprobante_ruta NVARCHAR(255),
 	ID_usuario int not null,
 	CONSTRAINT FK_Usuario_Sueldo FOREIGN KEY (ID_usuario) REFERENCES Usuario(ID_usuario),
 );

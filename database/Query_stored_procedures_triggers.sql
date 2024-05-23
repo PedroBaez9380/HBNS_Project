@@ -450,7 +450,46 @@ BEGIN
 		Fecha_inicio = @Fecha_inicio
 	END
 END
-drop procedure TraerInfoMembresia
+
+CREATE PROCEDURE [dbo].[GestionSueldos]
+    @Option VARCHAR(10),
+	@ID_estado_sueldo int = NULL,
+    @Cantidad DECIMAL(10,2) = NULL,
+    @Fecha_inicio DATE = NULL,
+    @Fecha_fin DATE = NULL,
+    @Estatus BIT = NULL,
+    @Comprobante_ruta NVARCHAR(255) = NULL,
+    @ID_usuario INT = NULL
+AS
+BEGIN
+    IF @Option = 'SELECTALL'
+    BEGIN
+        SELECT * FROM EstadoSueldo
+    END
+    IF @Option = 'SELECT'
+    BEGIN
+        SELECT * FROM EstadoSueldo
+        WHERE ID_usuario = @ID_usuario
+    END
+    IF @Option = 'INSERT'
+    BEGIN
+        DECLARE @Fecha_inicio_aux DATE
+        SET @Fecha_inicio_aux = CONVERT(DATE, GETDATE()) 
+        
+        SET @Fecha_fin = DATEADD(DAY, 15, @Fecha_inicio_aux)
+
+        INSERT INTO EstadoSueldo (Cantidad_pagar, Fecha_inicio, Fecha_fin, Estatus, ID_usuario)
+        VALUES (@Cantidad, @Fecha_inicio_aux, @Fecha_fin, 0, @ID_usuario)
+    END
+    IF @Option = 'UPDATE'
+    BEGIN
+        UPDATE EstadoSueldo SET Estatus = 1, Comprobante_ruta = @Comprobante_ruta
+        WHERE ID_estado_sueldo = @ID_estado_sueldo
+    END
+END
+
+DROP PROCEDURE GestionSueldos
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------Comandos temporales-----------------------------------------------------------------------------------------------------
@@ -525,3 +564,17 @@ UPDATE Usuario SET ID_membresia = 1003 WHERE ID_usuario = 12;
 EXEC TraerInfoMembresia 'SELECT',12,1003,'2024-05-22'
 
 INSERT INTO EstadoMembresia VALUES (1003,12, '2024-06-21', '2024-07-01', 0);
+
+UPDATE EstadoMembresia SET Estatus = 0
+
+INSERT INTO EstadoSueldo (Cantidad_pagar, Fecha_inicio, Fecha_fin, Estatus, Comprobante_ruta, ID_usuario)
+		VALUES (3000.20, '2024-05-15', '2024-05-31', 0, null, 1)
+
+EXEC GestionSueldos 'SELECTALL'
+
+SELECT * FROM EstadoSueldo
+
+UPDATE EstadoSueldo SET Estatus = 0
+
+INSERT INTO EstadoSueldo (Cantidad_pagar, Fecha_inicio, Fecha_fin, Estatus, ID_usuario)
+		VALUES (9380, '2024-05-30', '2024-06-15', 0, 12)
