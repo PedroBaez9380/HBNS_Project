@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj": {}
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj": {
+    "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
+        "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
         "projectName": "ApiHBNS",
-        "projectPath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
+        "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\obj\\",
+        "outputPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -85,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

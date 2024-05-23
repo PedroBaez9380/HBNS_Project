@@ -47,7 +47,49 @@ namespace ApiHBNS.Controllers
             }
         }
 
-        
+        [HttpPost]
+        [Route("Guardar")]
+        public dynamic GuardarClase(Clases Clases)
+        {
+
+            List<Parametro> parametros = new List<Parametro>
+            {
+                new Parametro("@Option", "INSERT"),
+                new Parametro("@Nombre", Clases.Nombre)
+
+            };
+
+            dynamic result = DBDatos.Ejecutar("GestionClases", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+
+        [HttpDelete]
+        [Route("Eliminar")]
+        public dynamic EliminarClase(Clases Clases)
+        {
+            List<Parametro> parametros = new List<Parametro>
+            {
+                new Parametro("@Option", "DELETE"),
+                new Parametro("@ID_clase", Clases.ID_clase.ToString()),
+            };
+
+            dynamic result = DBDatos.Ejecutar("GestionClases", parametros);
+
+            return new
+            {
+                success = result.exito.ToString(),
+                message = result.mensaje,
+                result = ""
+            };
+        }
+
+
     }
 }
 

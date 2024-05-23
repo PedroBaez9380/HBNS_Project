@@ -24,7 +24,7 @@ $(document).ready(function() {
         } else {
             option = "Actualizar"
             typemod = 'PUT'
-            ID = $("#ID_horario").val();
+            ID = $("#ID-membresia").val();
         }
         $.ajax({
             url: "https://localhost:7131/Membresias/"+ option,
@@ -32,7 +32,7 @@ $(document).ready(function() {
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             data: JSON.stringify({
-                "iD_horario": ID,
+                "iD_membresia": ID,
                 "nomenclatura": $("#nomenclatura").val(),
                 "descripcion": $("#descripcion").val(),
                 "costo": $("#costo").val(),

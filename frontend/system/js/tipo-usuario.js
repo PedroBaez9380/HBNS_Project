@@ -75,10 +75,12 @@ $(document).ready(function() {
         
         $('#boton-guardar').attr('disabled', true);
         $('#boton-nuevo').attr('disabled', false);
-        $('#boton-modificacion').attr('disabled', false);
+        $('#boton-eliminar').attr('disabled', false);
 
         $('#id-tipo').val($(this).find('td:eq(0)').text().trim());
         $('#descripcion').val($(this).find('td:eq(1)').text().trim());
+
+        $('#descripcion').attr('disabled', true);
 
         
     });

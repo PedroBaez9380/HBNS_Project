@@ -77,7 +77,7 @@ namespace ApiHBNS.Controllers
 
         [HttpPut]
         [Route("Actualizar")]
-        public dynamic ActualizarHorario(Membresias Membresias)
+        public dynamic ActualizarMembresia(Membresias Membresias)
         {
             List<Parametro> parametros = new List<Parametro>
         {

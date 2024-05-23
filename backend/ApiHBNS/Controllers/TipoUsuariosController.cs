@@ -75,7 +75,7 @@ namespace ApiHBNS.Controllers
 
         [HttpPut]
         [Route("Actualizar")]
-        public dynamic ActualizarUsuario(TipoUsuarios TipoUsuarios)
+        public dynamic ActualizarTipoUsuario(TipoUsuarios TipoUsuarios)
         {
             List<Parametro> parametros = new List<Parametro>
             {
@@ -96,7 +96,7 @@ namespace ApiHBNS.Controllers
 
         [HttpDelete]
         [Route("Eliminar")]
-        public dynamic EliminarUsuario(TipoUsuarios TipoUsuarios)
+        public dynamic EliminarTipoUsuario(TipoUsuarios TipoUsuarios)
         {
             List<Parametro> parametros = new List<Parametro>
             {

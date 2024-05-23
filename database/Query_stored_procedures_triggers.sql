@@ -28,6 +28,15 @@ INSERT INTO DiaSemana (ID_dia, Descripcion) VALUES
 (6, 'Sabado'),
 (7, 'Domingo')
 
+INSERT INTO TipoUsuario VALUES ('Admin')
+
+INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono,Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado)
+	VALUES (1, 'admin', 'Pedro Alberto', 'Baez Najera', '8128644703', 'pedro.baeznjr@uanl.edu.mx', GETDATE(), '2004-04-27', NULL, 1 )
+
+INSERT INTO AsignacionRol VALUES (1,3),(1,4) 
+
+INSERT INTO Clase VALUES ('HIPHOP'), ('JAZZ'), ('Contemporaneo') 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------stored procedures-------------------------------------------------------------------------------------------------------
@@ -430,15 +439,22 @@ END;
 
 CREATE PROCEDURE [dbo].[TraerInfoMembresia]
     @Option VARCHAR(10),
-    @ID_usuario INT,
+    @ID_usuario INT = null,
 	@ID_membresia INT = null,
 	@Fecha_inicio DATE = null,
     @Estatus BIT = NULL
 AS
 BEGIN
+	IF @Option = 'SELECTALL'
+	BEGIN
+		SELECT EM.*, M.Nomenclatura AS TipoMembresia, M.costo AS CostoMembresia
+		FROM EstadoMembresia EM
+		INNER JOIN Membresia M ON EM.ID_membresia = M.ID_membresia 
+		ORDER BY EM.Fecha_inicio DESC 
+	END
     IF @Option = 'SELECT'
 	BEGIN
-		SELECT TOP 2 EM.*, M.Nomenclatura AS TipoMembresia
+		SELECT TOP 2 EM.*, M.Nomenclatura AS TipoMembresia, M.costo AS CostoMembresia
 		FROM EstadoMembresia EM
 		INNER JOIN Membresia M ON EM.ID_membresia = M.ID_membresia
 		WHERE EM.ID_usuario = @ID_usuario

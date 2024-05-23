@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rXXGuOAzCII0jk2mNAnRIeyDsm7PZQ0UojBOMG3qtAnNKvJDr1zWqBxfnAQs6X1ZD4XBd+iohb6nb9oKJLDSeA==",
+  "dgSpecHash": "8yZTH+Hi/73t+WEreR++qgHWZHQWjo7nJZLJACaXltKEX5Wtt+pgN4wUzUGW2tB2WalVjKn5a8IRk0wW9Ip+iw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\OneDrive - Universidad Autonoma de Nuevo León\\Clases sexto semestre\\LAB Progra Web\\Proyecto\\Fase3\\Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
+  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Desktop\\HBNS-Repositorio\\HBNS_Project\\backend\\ApiHBNS\\ApiHBNS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnet.cors\\5.3.0\\microsoft.aspnet.cors.5.3.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\microsoft.aspnet.webapi.client\\6.0.0\\microsoft.aspnet.webapi.client.6.0.0.nupkg.sha512",

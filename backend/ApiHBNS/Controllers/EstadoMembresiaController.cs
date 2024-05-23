@@ -14,6 +14,41 @@ namespace ApiHBNS.Controllers
     public class EstadoMembresiaController : ControllerBase
     {
         [HttpGet]
+        [Route("TraerTodos")]
+        public IActionResult ObtenerEstadoMembresia()
+        {
+            try
+            {
+
+                List<Parametro> parametros = new List<Parametro>
+                {
+                    new Parametro("@Option", "SELECTALL"),
+                };
+
+                DataTable tAsignacionMembresia = DBDatos.Listar("TraerInfoMembresia", parametros);
+
+                var AsignacionesList = new List<Dictionary<string, object>>();
+                foreach (DataRow row in tAsignacionMembresia.Rows)
+                {
+                    var dict = new Dictionary<string, object>();
+                    foreach (DataColumn col in tAsignacionMembresia.Columns)
+                    {
+                        dict[col.ColumnName] = row[col];
+                    }
+                    AsignacionesList.Add(dict);
+                }
+
+                string jsonUsuarios = JsonSerializer.Serialize(AsignacionesList);
+
+                return Ok(new { Asignaciones = AsignacionesList });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
+        [HttpGet]
         [Route("Traer/{ID_usuario}")]
         public IActionResult ObtenerEstadoMembresia(int ID_usuario)
         {

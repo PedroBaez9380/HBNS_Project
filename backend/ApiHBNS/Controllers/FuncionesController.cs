@@ -180,6 +180,15 @@ namespace ApiHBNS.Controllers
                                 <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
                                     <button class=""btn btn-link"" id=""gestion-horarios.html"">Gestion de horarios</button>
                                 </div>
+                            </div>",
+                            @"
+                            <div class=""row justify-content-center"">
+                                <div class=""col-lg-1 col-sm-12 imagen-funcion d-flex align-items-center justify-content-center"">
+                                    <img src=""../images/imagenes-funciones/logo-gestion-articulos.png"" alt=""Gestion-clases"">
+                                </div>
+                                <div class=""col-lg-4 col-sm-12 d-flex align-items-center texto-funcion"">
+                                    <button class=""btn btn-link"" id=""gestion-clases.html"">Gestion de clases</button>
+                                </div>
                             </div>"
                         }
                     },

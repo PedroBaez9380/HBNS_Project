@@ -25,7 +25,8 @@ $(document).ready(function() {
         var id_seleccionado = $(this).attr('data-id');
         var nombre_seleccionado = $(this).text();
         traerMensajes(id_seleccionado, nombre_seleccionado);
-        $('#btn-enviar').removeAttr('disabled')
+        $('#mensaje-escribir').removeAttr('disabled')
+        $('#mensaje-escribir').val('')
         $('#btn-enviar').removeAttr('disabled')
         
     });

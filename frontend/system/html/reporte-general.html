@@ -30,19 +30,21 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-10 col-sm-12 contenedor-reporte p-5 ">
                     <div class="tabla-reporte">
-                        <table class="table">
+                        <table class="table" id="tabla-reporte">
                             <thead>
-                                <tr>
+                                <!-- <tr>
                                     <th scope="col"><input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar"          aria-describedby="basic-addon2"></th>
                                     <th scope="col"><input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2"></th>
                                     <th scope="col"><input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2"></th>
                                     <th scope="col"><input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2"></th>
-                                </tr>
+                                    <th scope="col"><input type="text" class="form-control full-width" placeholder="Buscar..." aria-label="Buscar" aria-describedby="basic-addon2"></th>
+                                </tr> -->
                                 <tr>
                                     <th scope="col">Concepto</th>
                                     <th scope="col">Relacion</th>
                                     <th scope="col">Cantidad</th>
                                     <th scope="col">Fecha</th>
+                                    <th scope="col">Estatus</th>
                                 </tr>
                             </thead>
                             <tbody id="tabla-cuerpo">
@@ -61,12 +63,12 @@
                             </tbody>
                         </table>
                     </div>   
-                    <div class="botones text-center">
+                    <!-- <div class="botones text-center">
                         <div class="d-inline-block">
                             <button type="button" class="btn btn-rounded btn-light">Exportar PDF</button>
                             <button type="button" class="btn btn-rounded btn-light">Exportar excel</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div> 
                 
             </div>
@@ -78,5 +80,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/reporte-general.js"></script>
 </body>
 </html>

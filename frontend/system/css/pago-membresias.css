@@ -38,9 +38,9 @@
     padding-bottom: 100px;
 }
 
-#tipo-membresia , #fecha-inicio-actual, #fecha-inicio-siguiente , #fecha-vencimiento-actual, #tipo-membresia-siguiente, #fecha-vencimiento-siguiente, #estatus-membresia-actual, #estatus-membresia-siguiente  {
+#tipo-membresia , #cantidad-pagar-actual, #cantidad-pagar-siguiente, #fecha-inicio-actual, #fecha-inicio-siguiente , #fecha-vencimiento-actual, #tipo-membresia-siguiente, #fecha-vencimiento-siguiente, #estatus-membresia-actual, #estatus-membresia-siguiente  {
     padding: 3px;
-    background-color: lightgray;
+    background-color: whitesmoke;
     border-radius: 10px;
 }
 

@@ -35,6 +35,7 @@ function traerdatos(userID) {
             $("#tipo-membresia").text(membresiaReciente.TipoMembresia);
             $("#fecha-inicio-actual").text(new Date(membresiaReciente.Fecha_inicio).toLocaleDateString());
             $("#fecha-vencimiento-actual").text(new Date(membresiaReciente.Fecha_vencimiento).toLocaleDateString());
+            $("#cantidad-pagar-actual").text(membresiaReciente.CostoMembresia);
             $("#estatus-membresia-actual").text(membresiaReciente.Estatus ? "Pagado" : "No pagado");
 
             if (result.asignacion.length > 1) {
@@ -42,6 +43,7 @@ function traerdatos(userID) {
                 $("#tipo-membresia-siguiente").text(membresiaSiguiente.TipoMembresia);
                 $("#fecha-inicio-siguiente").text(new Date(membresiaSiguiente.Fecha_inicio).toLocaleDateString());
                 $("#fecha-vencimiento-siguiente").text(new Date(membresiaSiguiente.Fecha_vencimiento).toLocaleDateString());
+                $("#cantidad-pagar-siguiente").text(membresiaReciente.CostoMembresia);
                 $("#estatus-membresia-siguiente").text(membresiaSiguiente.Estatus ? "Pagado" : "No pagado");
             } else {
                 $(".membresia-abajo").hide();
