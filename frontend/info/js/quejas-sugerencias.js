@@ -1,3 +1,37 @@
+$(document).ready(function() {
+    $('#queja').change(function() {
+        if ($(this).is(':checked')) {
+            $('#sugerencia').prop('checked', false);
+        }
+    });
+
+    $('#sugerencia').change(function() {
+        if ($(this).is(':checked')) {
+            $('#queja').prop('checked', false);
+        }
+    });
+
+    $("#form-quejas-sugerencias").submit(function (event) {
+        if ($("#descripcion").val() === "") {
+            alert("Favor de agregar una descripcion")
+            event.preventDefault()
+            event.stopPropagation()
+        } else {
+            if (!this.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            } else {
+                crearQuejaSugerencia();
+                event.preventDefault();
+                ("#form-quejas-sugerencias").classList.remove('was-validated')
+            }
+            this.classList.add('was-validated')
+        }
+        
+    });
+});
+
+
 function crearQuejaSugerencia() {
     var formattedDate = new Date().toISOString().slice(0, 10);
     $.ajax({
@@ -23,22 +57,5 @@ function crearQuejaSugerencia() {
     });
 }
 
-$("#form-quejas-sugerencias").submit(function (event) {
-    if ($("#descripcion").val() === "") {
-        alert("Favor de agregar una descripcion")
-        event.preventDefault()
-        event.stopPropagation()
-    } else {
-        if (!this.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-        } else {
-            crearQuejaSugerencia();
-            event.preventDefault();
-            ("#form-quejas-sugerencias").classList.remove('was-validated')
-        }
-        this.classList.add('was-validated')
-    }
-    
-});
+
 
