@@ -30,12 +30,12 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8 asignacion-rol d-flex flex-column align-items-center">
                     <div class="abreviatura d-flex flex-column align-items-center m-3">
-                        <h6>Numero de usuario</h6> <textarea class="form-control" id="telefono" rows="1" disabled></textarea>
+                        <h6>Numero de usuario</h6> <textarea class="form-control" id="id-usuario" rows="1" ></textarea>
                     </div>
                     <div class="descripcion d-flex flex-column align-items-center m-3">
                         <h6>Membresia</h6>
                         <select id="lstMembresias" name="lstMembresias" class="form-select" disabled>
-                            <option selected value="">Seleccionar opcion</option>
+                            <option selected value="0">Seleccionar opcion</option>
                         </select>
                     </div>
                     <div class="tabla-asignaciones text-center">
@@ -44,11 +44,13 @@
                                     <tr>
                                         <th scope="col">ID de usuario</th>
                                         <th scope="col">ID de membresia</th>
-                                        <th scope="col">Descripcion membresia</th>
+                                        <th scope="col">Nomenclatura</th>
+                                        <th scope="col">Descripcion</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tabla-cuerpo">
                                     <tr>
+                                        <td>nn</td>
                                         <td>nn</td>
                                         <td>nn</td>
                                         <td>nn</td>
@@ -58,11 +60,10 @@
                     </div>
                     <div class="botones text-center">
                         <div>
-                            <button type="button" class="btn btn-rounded btn-secondary">Guardar</button>
+                            <button type="button" class="btn btn-rounded btn-secondary" id="boton-guardar">Guardar</button>
                         </div>
                         <div class="d-inline-block">
-                            <button type="button" class="btn btn-rounded btn-light">Eliminar</button>
-                            <button type="button" class="btn btn-rounded btn-light">Nuevo</button>
+                            <button type="button" class="btn btn-rounded btn-light" id="boton-eliminar">Eliminar</button>
                         </div>
                     </div>
                 </div>
@@ -75,5 +76,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script src="../js/boton-volver.js"></script>
+
+    <script src="../js/asignacion-membresias.js"></script>
 </body>
 </html>
