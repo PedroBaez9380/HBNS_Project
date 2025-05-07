@@ -23,7 +23,7 @@ function login() {
     .then(result => {
         if (result.success) {
             if(!result.estado){
-                alert("Usuario deshabilitado administrativamente")
+                alert("Credenciales incorrectas o usuario inactivo")
                 return;
             }
             alert("¡Inicio de sesión exitoso!");
