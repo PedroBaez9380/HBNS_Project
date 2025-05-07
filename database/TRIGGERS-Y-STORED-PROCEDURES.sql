@@ -35,7 +35,7 @@ BEGIN
 END
 GO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ALTER PROCEDURE [dbo].[ObtenerLogin]
+Create PROCEDURE [dbo].[ObtenerLogin]
     @ID_usuario INT,
     @Contrasena VARCHAR(100)
 AS
@@ -438,29 +438,34 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    DECLARE @ID_usuario INT, @ID_membresia INT, @FechaInicio DATETIME, @FechaVencimiento DATETIME, @Duracion INT;
+    DECLARE @ID_usuario INT, @ID_membresia_nueva INT, @Duracion INT;
 
-    SELECT @ID_usuario = ID_usuario, @ID_membresia = ID_membresia FROM inserted;
+    -- Obtener el ID del usuario y el nuevo ID de membresía
+    SELECT 
+        @ID_usuario = ID_usuario,
+        @ID_membresia_nueva = ID_membresia
+    FROM inserted;
 
     -- Solo ejecutar si se ha cambiado el ID_membresia y el nuevo ID_membresia no es nulo
-    IF UPDATE(ID_membresia) AND @ID_membresia IS NOT NULL
+    IF UPDATE(ID_membresia) AND @ID_membresia_nueva IS NOT NULL
     BEGIN
+        -- Eliminar los registros de EstadoMembresia INACTIVOS (Estatus = 0) para el usuario
+        DELETE FROM EstadoMembresia
+        WHERE ID_usuario = @ID_usuario
+          AND Estatus = 0;
+
         -- Obtener la duración de la nueva membresía
-        SELECT @Duracion = Duracion FROM Membresia WHERE ID_membresia = @ID_membresia;
+        SELECT @Duracion = Duracion 
+        FROM Membresia 
+        WHERE ID_membresia = @ID_membresia_nueva;
 
-        -- Manejar el cambio de membresía:
-        -- 1.  Invalidar la membresía anterior (si existe)
-        UPDATE EstadoMembresia
-        SET Estatus = '0'  -- O algún valor que indique "inactivo"
-        WHERE ID_usuario = @ID_usuario;
-
-        -- 2. Insertar un nuevo registro en EstadoMembresia para la nueva membresía
+        -- Insertar un nuevo registro en EstadoMembresia para la nueva membresía
         INSERT INTO EstadoMembresia (ID_usuario, ID_membresia, Fecha_inicio, Fecha_vencimiento, Estatus)
-        VALUES (@ID_usuario, @ID_membresia, GETDATE(), DATEADD(day, @Duracion, GETDATE()), '1');
+        VALUES (@ID_usuario, @ID_membresia_nueva, GETDATE(), DATEADD(day, @Duracion, GETDATE()), 1);
 
-        -- Insertar un segundo registro para el segundo periodo de membresía
+        -- Insertar un segundo registro para el segundo periodo de membresía (si es necesario)
         INSERT INTO EstadoMembresia (ID_usuario, ID_membresia, Fecha_inicio, Fecha_vencimiento, Estatus)
-        VALUES (@ID_usuario, @ID_membresia, DATEADD(day, @Duracion, GETDATE()), DATEADD(day, @Duracion * 2, GETDATE()), '0');
+        VALUES (@ID_usuario, @ID_membresia_nueva, DATEADD(day, @Duracion, GETDATE()), DATEADD(day, @Duracion * 2, GETDATE()), 0);
     END
 END;
 GO

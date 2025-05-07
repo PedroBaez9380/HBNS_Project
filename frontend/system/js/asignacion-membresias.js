@@ -63,33 +63,38 @@ $(document).ready(function() {
     $('#boton-guardar').on('click', function() {
         if ($('#lstMembresias').val() == 0) {
             alert("Seleccione una membresia");
-        } else {
-            $.ajax({
-                url: "https://localhost:7131/AsignacionMembresias/Guardar",
-                type: 'POST',
-                contentType: "application/json; charset=utf-8",
-                dataType: 'json',
-                data: JSON.stringify({
-                    "ID_usuario": $("#id-usuario").val(),
-                    "ID_membresia": $('#lstMembresias').val()
-                }),
-                crossDomain: true
-            }).done(function (result) {
-                console.log(result);
-                alert("Guardado exitoso!");
-                $('#boton-guardar').attr('disabled', true);
-                $('#boton-eliminar').attr('disabled', true);
-                $('#boton-nuevo').attr('disabled', false);
-                $('#lstMembresias').attr('disabled', true);
-                $('#id-usuario').val("");
-                $('#lstMembresias').val("0");
-                traerAsignaciones()
-                
-            }).fail(function (xhr, status, error) {
-                alert("Hubo un problema al guardar: " + error + "\nStatus: " + status);
-                console.error(xhr);
-            });
-        }
+            return;
+        } 
+
+        if (!confirm("Recuerda que el usuario debe pagar al asignar una nueva membresia, ¿esta seguro de continuar?")) {
+            return;
+        } 
+        
+        $.ajax({
+            url: "https://localhost:7131/AsignacionMembresias/Guardar",
+            type: 'POST',
+            contentType: "application/json; charset=utf-8",
+            dataType: 'json',
+            data: JSON.stringify({
+                "ID_usuario": $("#id-usuario").val(),
+                "ID_membresia": $('#lstMembresias').val()
+            }),
+            crossDomain: true
+        }).done(function (result) {
+            console.log(result);
+            alert("Guardado exitoso!");
+            $('#boton-guardar').attr('disabled', true);
+            $('#boton-eliminar').attr('disabled', true);
+            $('#boton-nuevo').attr('disabled', false);
+            $('#lstMembresias').attr('disabled', true);
+            $('#id-usuario').val("");
+            $('#lstMembresias').val("0");
+            traerAsignaciones()
+            
+        }).fail(function (xhr, status, error) {
+            alert("Hubo un problema al guardar: " + error + "\nStatus: " + status);
+            console.error(xhr);
+        });
 
         
     });
@@ -132,7 +137,7 @@ function traerNomenclaturaMembresia() {
     }).done(function (result) {
         var opciones = '<option selected value="0">Seleccionar opción</option>';
         result.result.membresias.forEach(function(membresia) {
-            opciones += '<option value="' + membresia.iD_membresia + '">' + membresia.nomenclatura + '</option>';
+            opciones += '<option value="' + membresia.iD_membresia + '">' + membresia.nomenclatura + ' Costo:' + membresia.costo + '</option>';
         });
 
         $('#lstMembresias').each(function() {
