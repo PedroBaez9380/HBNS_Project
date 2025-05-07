@@ -11,6 +11,10 @@
     text-align: center;
 }
 
+.creacion-horario div input{
+    width: 11em;
+    text-align: center;
+}
 
 .tabla-horarios {
     overflow-y: auto;

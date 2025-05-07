@@ -1,8 +1,11 @@
 $(document).ready(function() {
+    
     $('#boton-guardar').attr('disabled', true);
     $('#boton-eliminar').attr('disabled', true);
-
+    limpiarCampos();
+    
     traerTodosHorarios();
+    
     $('#boton-nuevo').click(function() {
         habilitarCampos()
         traerDiaSemana()
@@ -211,12 +214,12 @@ function habilitarCampos(){
     $('#lstDiasDeHorario').removeAttr('disabled');
 }
 
-function resetearCampos(){
-    $('#Nomenclatura').attr('disabled');
-    $('#Hora_inicio').attr('disabled');
-    $('#Hora_final').attr('disabled');
-    $('#lstClasesDeHorario').attr('disabled');
-    $('#lstDiasDeHorario').attr('disabled');
+function limpiarCampos(){
+    $('#Nomenclatura').attr('disabled', true);
+    $('#Hora_inicio').attr('disabled', true);
+    $('#Hora_final').attr('disabled', true);
+    $('#lstClasesDeHorario').attr('disabled', true);
+    $('#lstDiasDeHorario').attr('disabled', true);
 
     $('#Nomenclatura').val("");
     $('#Hora_inicio').val("");
