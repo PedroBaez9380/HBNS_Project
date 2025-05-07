@@ -32,6 +32,10 @@ $(document).ready(function() {
     });
 
     $(document).on('click', '#btn-enviar', function() {
+        var mensajevacio = $('#mensaje-escribir').val();
+        if (mensajevacio == ''){
+            return;
+        }
         const urlParams = new URLSearchParams(window.location.search);
         const id_actual = urlParams.get('id');
         var id_seleccionado = $('#usuario-actual').attr('data-id');
@@ -64,6 +68,8 @@ $(document).ready(function() {
             nombre_seleccionado = $('#usuario-actual').text();
             id_seleccionado = $('#usuario-actual').attr('data-id');
             traerMensajes(id_seleccionado, nombre_seleccionado)
+            $('#mensaje-escribir').val('');
+            
             
         }).fail(function (xhr, status, error) {
             alert("Hubo un problema al mandar el mensaje: " + error + "\nStatus: " + status);
