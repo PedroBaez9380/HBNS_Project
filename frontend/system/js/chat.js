@@ -22,6 +22,13 @@ $(document).ready(function() {
 
     
     $(document).on('click', '.boton-usuario', function() {
+
+        // 2. Remover la clase de selección de todos los botones dentro de #usuarios-traer
+        $('#usuarios-traer button').removeClass('seleccionado');
+
+        // 3. Agregar una clase al botón clickeado para cambiar su color
+        $(this).addClass('seleccionado');
+
         var id_seleccionado = $(this).attr('data-id');
         var nombre_seleccionado = $(this).text();
         traerMensajes(id_seleccionado, nombre_seleccionado);

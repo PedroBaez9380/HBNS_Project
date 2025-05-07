@@ -34,6 +34,12 @@
     margin: 0px;
 }
 
+#usuarios-traer button.seleccionado {
+    background-color: #007bff; /* Ejemplo de color azul sólido */
+    color: white; /* Opcional: cambiar el color del texto para que contraste */
+    /* Puedes agregar más estilos si lo deseas, como bordes, etc. */
+}
+
 /* Estilos solo para mensajes */
 
 #usuario-actual {
