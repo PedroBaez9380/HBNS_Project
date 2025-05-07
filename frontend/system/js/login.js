@@ -13,7 +13,10 @@ function login() {
     })
     .then(response => {
         if (!response.ok) {
-            throw new Error('Error al iniciar sesión');
+            // Leer el cuerpo de la respuesta JSON para obtener el mensaje de error
+            return response.json().then(errorData => {
+                throw new Error(errorData.message || 'Error al iniciar sesión');
+            });
         }
         return response.json();
     })
@@ -25,11 +28,11 @@ function login() {
             var accessToken = result.accessToken;
             window.location.href = "funciones.html?id=" + $("#usuario").val();
         } else {
-            alert(result.message);
+            alert(result.message); // Aquí ya se muestra el mensaje de la API
         }
     })
     .catch(error => {
-        alert(error.message);
+        alert(error.message); // Aquí se mostrarán errores de red o errores específicos de la API
     });
 }
 
@@ -51,4 +54,3 @@ $("#form-login").submit(function (event) {
         this.classList.add('was-validated');
     }
 });
-
