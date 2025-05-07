@@ -15,6 +15,8 @@ $(document).ready(function() {
                 dataType: 'json',
                 crossDomain: true
             }).done(function (result) {
+                
+
                 if (result.usuarios && result.usuarios.length > 0) {
                     var nombreUsuario = result.usuarios[0].Nombre + ' ' + result.usuarios[0].Apellido;
                     $('#nombre-usuario').val(nombreUsuario);
@@ -51,18 +53,22 @@ $(document).ready(function() {
             
             pagarMembresia(tipoMembresia, fechaInicio, estatus);
             pintarCampos()
+            window.location.reload(true);
         }
         
     });
 
-
     $('#pagar-membresia-siguiente').on('click', function() {
-        var tipoMembresia = $('#tipo-membresia-siguiente').attr('data-id');
-        var fechaInicio = $('#fecha-inicio-siguiente').text().split('/').reverse().join('-');
-        var estatus = true;
+        if (confirm("¿Está seguro de que desea pagar la membresía siguiente?")) {
+            var tipoMembresia = $('#tipo-membresia-siguiente').attr('data-id');
+            var fechaInicio = $('#fecha-inicio-siguiente').text().split('/').reverse().join('-');
+            var estatus = true;
+            
+            pagarMembresia(tipoMembresia, fechaInicio, estatus);
+            pintarCampos()
+            window.location.reload(true);
+        }
         
-        pagarMembresia(tipoMembresia, fechaInicio, estatus);
-        pintarCampos()
     });
     
 });
@@ -75,7 +81,6 @@ function traerdatos(userID) {
         crossDomain: true
     }).done(function (result) {
         if (result.asignacion.length > 0) {
-
             var membresiaReciente = result.asignacion[1];
             $("#tipo-membresia").text(membresiaReciente.TipoMembresia);
             $("#fecha-inicio-actual").text(new Date(membresiaReciente.Fecha_inicio).toLocaleDateString());
@@ -97,7 +102,9 @@ function traerdatos(userID) {
                 $(".membresia-abajo").hide();
             }
         } else {
-            $(".seccion-info-membresia").hide();
+            alert("El usuario no cuenta con membresias activas");
+                window.location.reload(true);
+                return;
         }
     }).fail(function (xhr, status, error) {
         alert("Hubo un problema al traer las membresias: " + error + "\nStatus: " + status);
