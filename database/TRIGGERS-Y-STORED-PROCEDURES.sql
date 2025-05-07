@@ -35,15 +35,17 @@ BEGIN
 END
 GO
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-CREATE PROCEDURE [dbo].[ObtenerLogin]
+ALTER PROCEDURE [dbo].[ObtenerLogin]
     @ID_usuario INT,
     @Contrasena VARCHAR(100)
 AS
 BEGIN
     IF EXISTS (SELECT 1 FROM Usuario WHERE ID_usuario = @ID_usuario AND Contrasena = @Contrasena)
     BEGIN
-        -- Devolver el ID de usuario y el resultado 'Entrando' si la autenticación es exitosa
-        SELECT ID_usuario, 'Entrando' AS Resultado FROM Usuario WHERE ID_usuario = @ID_usuario;
+        -- Devolver el ID de usuario, el resultado 'Entrando' y el estado del usuario
+        SELECT ID_usuario, 'Entrando' AS Resultado, Estado
+        FROM Usuario
+        WHERE ID_usuario = @ID_usuario;
     END
 END
 GO

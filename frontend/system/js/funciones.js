@@ -30,10 +30,19 @@ $(document).ready(function() {
                 });
             } else {
                 console.log("No se encontraron funciones.");
+                
             }
         },
-        error: function(error) {
-            console.error('Error:', error);
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('Error:', jqXHR, textStatus, errorThrown);
+            // Verifica si la respuesta de la API contiene el mensaje específico
+            if (jqXHR.responseText === "No se encontraron roles asignados para el usuario.") {
+                alert("No se encontraron roles asignados para el usuario.");
+            } else {
+                // Muestra un mensaje de error más general o el detalle del error
+                alert("Ocurrió un error al obtener las funciones: " + (jqXHR.responseText || textStatus || errorThrown));
+            }
         }
+    
     });
 });

@@ -22,6 +22,10 @@ function login() {
     })
     .then(result => {
         if (result.success) {
+            if(!result.estado){
+                alert("Usuario deshabilitado administrativamente")
+                return;
+            }
             alert("¡Inicio de sesión exitoso!");
             console.log(result);
             localStorage.setItem('accessToken', result.accessToken);
