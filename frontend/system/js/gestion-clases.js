@@ -1,5 +1,8 @@
 $(document).ready(function() {
     traerTiposUsuario()
+    $('#boton-nuevo').attr('disabled', false)
+            $('#boton-eliminar').attr('disabled', true)
+            $('#boton-guardar').attr('disabled', true)
 
     $('#boton-nuevo').on('click', function() {
         $('#boton-nuevo').attr('disabled', true)
