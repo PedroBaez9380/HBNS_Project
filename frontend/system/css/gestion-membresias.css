@@ -6,13 +6,16 @@
 }
 
 .gestion-membresias textarea {
-    width: 100%;
+    width: 300px;
     margin-bottom: 20px;
 }
 
 .campos div{
     width: 80%;
 }
+
+
+
 
 /* Diseños para la parte de la tabla de articulos */
 

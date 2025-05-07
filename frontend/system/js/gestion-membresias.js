@@ -113,6 +113,8 @@ $(document).ready(function() {
         $('#boton-nuevo').attr('disabled', true);
         $('#boton-eliminar').attr('disabled', true);
         $('#boton-modificacion').attr('disabled', true);
+        $('#costo').attr('disabled', true);
+        $('#duracion').attr('disabled', true);
     });
     
 });
