@@ -1,9 +1,28 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------Borrar la BD------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--USE MASTER
+--DROP DATABASE HBNSDB
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------Crear y usar la BD-------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CREATE DATABASE HBNSDB
+GO
+USE HBNSDB
+GO
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------Comandos definiciones de tablas-----------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 CREATE TABLE TipoUsuario (
     ID_tipo_usuario INT PRIMARY KEY IDENTITY(1,1) not null,
     Descripcion VARCHAR(50) not null
 );
 
-exec sp_help TipoUsuario;
+--exec sp_help TipoUsuario;
 
 CREATE TABLE Membresia (
     ID_membresia INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -13,7 +32,7 @@ CREATE TABLE Membresia (
     Duracion INT not null
 );
 
-exec sp_help Membresia;
+--exec sp_help Membresia;
 
 CREATE TABLE Usuario (
     ID_usuario INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -25,20 +44,20 @@ CREATE TABLE Usuario (
     Correo NVARCHAR(320) not null,
     Fecha_registro DATETIME not null,
     Fecha_nacimiento DATETIME not null,
-	ID_membresia INT,
+	ID_membresia INT null,
 	Estado BIT not null,
     CONSTRAINT FK_TipoUsuario_Usuario FOREIGN KEY (ID_tipo_usuario) REFERENCES TipoUsuario(ID_tipo_usuario) ,
 	CONSTRAINT FK_Membresia_Usuario FOREIGN KEY (ID_membresia) REFERENCES Membresia(ID_membresia) 
 );
 
-exec sp_help Usuario;
+--exec sp_help Usuario;
 
 CREATE TABLE Rol (
     ID_Rol INT PRIMARY KEY IDENTITY(1,1) not null,
     Descripcion VARCHAR(255) not null
 );
 
-exec sp_help Rol;
+--exec sp_help Rol;
 
 CREATE TABLE AsignacionRol (
     ID_usuario INT FOREIGN KEY REFERENCES Usuario(ID_usuario) not null,
@@ -46,7 +65,7 @@ CREATE TABLE AsignacionRol (
 	CONSTRAINT PK_usuario_AsignacionRoles PRIMARY KEY (ID_usuario, ID_rol),
 );
 
-exec sp_help AsignacionRol;
+--exec sp_help AsignacionRol;
 
 CREATE TABLE RegistroChat (
 	ID_registro INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -56,7 +75,7 @@ CREATE TABLE RegistroChat (
     Fecha_envio DATETIME not null,
 );
 
-exec sp_help RegistroChat;
+--exec sp_help RegistroChat;
 
 
 CREATE TABLE Producto (
@@ -68,7 +87,7 @@ CREATE TABLE Producto (
     Descripcion_larga VARCHAR(MAX)
 );
 
-exec sp_help Producto;
+--exec sp_help Producto;
 
 CREATE TABLE Compra (
     ID_compra INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -79,7 +98,7 @@ CREATE TABLE Compra (
     CONSTRAINT FK_Usuario_Compras FOREIGN KEY (ID_usuario) REFERENCES Usuario(ID_usuario)
 );
 
-exec sp_help Compra;
+--exec sp_help Compra;
 
 CREATE TABLE DetalleCompra (
     ID_compra INT FOREIGN KEY REFERENCES Compra(ID_compra) not null,
@@ -89,7 +108,7 @@ CREATE TABLE DetalleCompra (
 	CONSTRAINT PK_detalle_compra PRIMARY KEY (ID_compra, ID_producto),
 );
 
-exec sp_help DetalleCompra;
+--exec sp_help DetalleCompra;
 
 CREATE TABLE Venta (
     ID_venta INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -102,7 +121,7 @@ CREATE TABLE Venta (
     CONSTRAINT FK_UsuarioCliente_Ventas FOREIGN KEY (ID_usuario_cliente) REFERENCES Usuario(ID_usuario)
 );
 
-exec sp_help Venta;
+--exec sp_help Venta;
 
 CREATE TABLE DetalleVenta (
     ID_detalleventa INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -115,21 +134,21 @@ CREATE TABLE DetalleVenta (
     CONSTRAINT FK_Producto_DetalleVenta FOREIGN KEY (ID_producto) REFERENCES Producto(ID_producto)
 );
 
-exec sp_help DetalleVenta;
+--exec sp_help DetalleVenta;
 
 CREATE TABLE Clase (
 	ID_clase INT PRIMARY KEY IDENTITY(1,1) not null,
 	Nombre VARCHAR(40) not null
 );
 
-exec sp_help Clase;
+--exec sp_help Clase;
 
 CREATE TABLE DiaSemana (
 	ID_dia INT PRIMARY KEY not null,
 	Descripcion VARCHAR(20) not null
 );
 
-exec sp_help DiaSemana;
+--exec sp_help DiaSemana;
 
 CREATE TABLE Horario (
     ID_horario INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -142,7 +161,7 @@ CREATE TABLE Horario (
 	CONSTRAINT FK_Dia_Horarios FOREIGN KEY (ID_dia) REFERENCES DiaSemana(ID_dia)
 );
 
-exec sp_help Horario;
+--exec sp_help Horario;
 
 CREATE TABLE EstadoSueldo (
     ID_estado_sueldo INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -155,7 +174,7 @@ CREATE TABLE EstadoSueldo (
 	CONSTRAINT FK_Usuario_Sueldo FOREIGN KEY (ID_usuario) REFERENCES Usuario(ID_usuario),
 );
 
-exec sp_help EstadoSueldo;
+--exec sp_help EstadoSueldo;
 
 CREATE TABLE AsignacionHorario (
     ID_usuario INT FOREIGN KEY REFERENCES Usuario(ID_usuario) not null,
@@ -163,7 +182,7 @@ CREATE TABLE AsignacionHorario (
 	CONSTRAINT PK_usuario_horario PRIMARY KEY (ID_usuario, ID_horario)
 );
 
-exec sp_help AsignacionHorario;
+--exec sp_help AsignacionHorario;
 
 CREATE TABLE MembresiaHorario (
     ID_membresia INT FOREIGN KEY REFERENCES Membresia(ID_membresia) not null,
@@ -171,7 +190,7 @@ CREATE TABLE MembresiaHorario (
     CONSTRAINT PK_membresia_horario PRIMARY KEY (ID_membresia, ID_horario)
 );
 
-exec sp_help MembresiaHorario;
+--exec sp_help MembresiaHorario;
 
 CREATE TABLE EstadoMembresia (
     ID_membresia int FOREIGN KEY REFERENCES Membresia(ID_membresia) not null,
@@ -182,7 +201,7 @@ CREATE TABLE EstadoMembresia (
 	CONSTRAINT PK_estado_membresia PRIMARY KEY (ID_membresia, ID_usuario, Fecha_inicio)
 );
 
-exec sp_help EstadoMembresia;
+--exec sp_help EstadoMembresia;
 
 CREATE TABLE QuejasSugerencias (
     ID_queja_sug INT PRIMARY KEY IDENTITY(1,1) not null,
@@ -191,3 +210,59 @@ CREATE TABLE QuejasSugerencias (
     Descripcion NVARCHAR(500) not null,
     Fecha DATETIME not null,
 );
+GO
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------Comandos definiciones de datos en tablas-----------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO Rol (Descripcion) VALUES 
+('Maestro'),
+('Alumno'),
+('Administrador de usuarios'),
+('Administrador de roles'),
+('Coordinador académico'),
+('Administrador académico'),
+('Compras'),
+('Administrador de Compras'),
+('Ventas'),
+('Administrador de ventas'),
+('Finanzas'),
+('Administrador de Finanzas'),
+('Reporte de finanzas');
+
+INSERT INTO DiaSemana (ID_dia, Descripcion) VALUES 
+(1, 'Lunes'),
+(2, 'Martes'),
+(3, 'Miercoles'),
+(4, 'Jueves'),
+(5, 'Viernes'),
+(6, 'Sabado'),
+(7, 'Domingo');
+GO
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------Comandos DE DATOS PARA TABLAS----------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+INSERT INTO TipoUsuario VALUES ('Admin') --puede ser maestro, alumno, o cualquiera, es libre
+
+INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono,Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado)
+	VALUES (1, 'admin', 'Pedro Alberto', 'Baez Najera', '8128644703', 'pedro.baeznjr@uanl.edu.mx', GETDATE(), '2004-04-27', NULL, 1 )
+
+INSERT INTO AsignacionRol VALUES (1,3),(1,4) 
+
+INSERT INTO Clase VALUES ('HIPHOP'), ('JAZZ'), ('Contemporaneo') 
+
+INSERT INTO Horario VALUES (1, 'HipHopM8-9', '8:00', '9:00', 1)
+
+INSERT INTO Usuario (ID_tipo_usuario, Contrasena, Nombre, Apellido, Telefono, Correo, Fecha_registro, Fecha_nacimiento, ID_membresia, Estado )
+VALUES (1, 'pedrito01', 'Entoma', 'Vassilisa Zeta', 8128644703, 'pedro.baeznjr@uanl.edu.mx', '2024-05-19', '2004-04-27', NULL, 1);
+
+INSERT INTO AsignacionRol VALUES (2,1), (2,2), (2,3), (2,4), (2,5), (2,6), (2,7), (2,8), (2,9), (2,10), (2,11), (2,12), (2,13)
+

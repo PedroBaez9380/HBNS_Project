@@ -6,7 +6,7 @@ namespace ApiHBNS.Recursos
 {
     public class DBDatos
     {
-        public static string cadenaConexion = "Data Source=DESKTOP-GA8DN52\\SQLEXPRESS;Initial Catalog=HBNSDATABASE;Integrated Security=True;";
+        public static string cadenaConexion = "Data Source=DESKTOP-1HQJE39;Initial Catalog=HBNSDB;Integrated Security=True;";
         public static DataSet ListarTablas(string nombreProcedimiento, List<Parametro> parametros = null)
         {
             SqlConnection conexion = new SqlConnection(cadenaConexion);

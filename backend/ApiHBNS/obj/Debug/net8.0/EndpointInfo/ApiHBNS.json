@@ -1,0 +1,1416 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ApiHBNS",
+    "version": "1.0"
+  },
+  "paths": {
+    "/AsignacionHorarios/Traer/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "AsignacionHorarios"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/AsignacionHorarios/Guardar": {
+      "post": {
+        "tags": [
+          "AsignacionHorarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionHorarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionHorarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionHorarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/AsignacionMembresias/Traer": {
+      "get": {
+        "tags": [
+          "AsignacionMembresias"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/AsignacionMembresias/Guardar": {
+      "post": {
+        "tags": [
+          "AsignacionMembresias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/AsignacionMembresias/Eliminar": {
+      "post": {
+        "tags": [
+          "AsignacionMembresias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AsignacionMembresias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Chats/Traer/{ID_usuario}/{ID_usuario_seleccionado}": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ID_usuario_seleccionado",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Chats/Guardar": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Chat"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Chat"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Chat"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Clases/Traer": {
+      "get": {
+        "tags": [
+          "Clases"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Clases/Guardar": {
+      "post": {
+        "tags": [
+          "Clases"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Clases/Eliminar": {
+      "delete": {
+        "tags": [
+          "Clases"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Clases"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/DiaSemana/Traer": {
+      "get": {
+        "tags": [
+          "DiaSemana"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/EstadoMembresia/TraerTodos": {
+      "get": {
+        "tags": [
+          "EstadoMembresia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/EstadoMembresia/Traer/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "EstadoMembresia"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/EstadoMembresia/Actualizar": {
+      "put": {
+        "tags": [
+          "EstadoMembresia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoMembresia"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoMembresia"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/EstadoMembresia"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/SubirArchivos/Subir": {
+      "post": {
+        "tags": [
+          "FileUpload"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "file": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Funciones/ObtenerFunciones/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "Funciones"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Horarios/Traer": {
+      "get": {
+        "tags": [
+          "Horarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Horarios/Guardar": {
+      "post": {
+        "tags": [
+          "Horarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Horarios/Actualizar": {
+      "put": {
+        "tags": [
+          "Horarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Horarios/Borrar": {
+      "delete": {
+        "tags": [
+          "Horarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Horarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Horariosxclase/TraerHorarios/{ID_clase}": {
+      "get": {
+        "tags": [
+          "Horarioxclase"
+        ],
+        "parameters": [
+          {
+            "name": "ID_clase",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Login/Listar": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Login"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Membresias/Traer": {
+      "get": {
+        "tags": [
+          "Membresias"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Membresias/Guardar": {
+      "post": {
+        "tags": [
+          "Membresias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Membresias/Actualizar": {
+      "put": {
+        "tags": [
+          "Membresias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Membresias/Borrar": {
+      "delete": {
+        "tags": [
+          "Membresias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Membresias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/QuejasSugerencias/Listar": {
+      "get": {
+        "tags": [
+          "QuejasSugerencias"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/QuejasSugerencias/Guardar": {
+      "post": {
+        "tags": [
+          "QuejasSugerencias"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuejasSugerencias"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuejasSugerencias"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuejasSugerencias"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Roles/Traer/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "Roles"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Roles/Guardar": {
+      "post": {
+        "tags": [
+          "Roles"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roles"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roles"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Roles"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Sueldos/TraerTodos": {
+      "get": {
+        "tags": [
+          "Sueldos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Sueldos/Traer/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "Sueldos"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Sueldos/Guardar": {
+      "post": {
+        "tags": [
+          "Sueldos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Sueldos/Actualizar": {
+      "put": {
+        "tags": [
+          "Sueldos"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sueldos"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TipoUsuarios/TraerTodos": {
+      "get": {
+        "tags": [
+          "TipoUsuarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TipoUsuarios/Guardar": {
+      "post": {
+        "tags": [
+          "TipoUsuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TipoUsuarios/Actualizar": {
+      "put": {
+        "tags": [
+          "TipoUsuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/TipoUsuarios/Eliminar": {
+      "delete": {
+        "tags": [
+          "TipoUsuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TipoUsuarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Usuarios/Traer/{ID_usuario}": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "parameters": [
+          {
+            "name": "ID_usuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Usuarios/TraerTodosUsuarios": {
+      "get": {
+        "tags": [
+          "Usuarios"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Usuarios/Guardar": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Usuarios/Actualizar": {
+      "put": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Usuarios"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AsignacionHorarios": {
+        "type": "object",
+        "properties": {
+          "option": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_horarios": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
+          },
+          "descripcionDia": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreClase": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AsignacionMembresias": {
+        "type": "object",
+        "properties": {
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "iD_membresia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Chat": {
+        "type": "object",
+        "properties": {
+          "iD_usuario_actual": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "iD_usuario_seleccionado": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "mensaje": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_envio": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Clases": {
+        "type": "object",
+        "properties": {
+          "iD_clase": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EstadoMembresia": {
+        "type": "object",
+        "properties": {
+          "iD_membresia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fecha_inicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_vencimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "costoMembresia": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "tipoMembresia": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Horarios": {
+        "type": "object",
+        "properties": {
+          "iD_horario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "iD_clase": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nomenclatura": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora_inicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "hora_final": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_dia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "descripcionDia": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreClase": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Login": {
+        "type": "object",
+        "properties": {
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "contrasena": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Membresias": {
+        "type": "object",
+        "properties": {
+          "iD_membresia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "nomenclatura": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "costo": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "duracion": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "QuejasSugerencias": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Roles": {
+        "type": "object",
+        "properties": {
+          "iD_usuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sueldos": {
+        "type": "object",
+        "properties": {
+          "iD_estado_sueldo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cantidad_pagar": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fecha_inicio": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_fin": {
+            "type": "string",
+            "nullable": true
+          },
+          "estatus": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "comprobante_ruta": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TipoUsuarios": {
+        "type": "object",
+        "properties": {
+          "iD_tipo_usuario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Usuarios": {
+        "type": "object",
+        "properties": {
+          "iD_usuario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "iD_tipo_usuario": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "contrasena": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_registro": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_nacimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "iD_membresia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "estado": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

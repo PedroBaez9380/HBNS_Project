@@ -1,0 +1,619 @@
+[
+  {
+    "ContainingType": "ApiHBNS.Controllers.AsignacionHorariosController",
+    "Method": "GuardarAsignacionHorario",
+    "RelativePath": "AsignacionHorarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AsignacionHorarios",
+        "Type": "ApiHBNS.Models.AsignacionHorarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.AsignacionHorariosController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "AsignacionHorarios/Traer/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.AsignacionMembresiasController",
+    "Method": "EliminarAsignacionMembresia",
+    "RelativePath": "AsignacionMembresias/Eliminar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AsignacionMembresias",
+        "Type": "ApiHBNS.Models.AsignacionMembresias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.AsignacionMembresiasController",
+    "Method": "GuardarAsignacionMembresia",
+    "RelativePath": "AsignacionMembresias/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AsignacionMembresias",
+        "Type": "ApiHBNS.Models.AsignacionMembresias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.AsignacionMembresiasController",
+    "Method": "ObtenerMembresias",
+    "RelativePath": "AsignacionMembresias/Traer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.ChatController",
+    "Method": "GuardarMensaje",
+    "RelativePath": "Chats/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Chat",
+        "Type": "ApiHBNS.Models.Chat",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.ChatController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "Chats/Traer/{ID_usuario}/{ID_usuario_seleccionado}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      },
+      {
+        "Name": "ID_usuario_seleccionado",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.ClasesController",
+    "Method": "EliminarClase",
+    "RelativePath": "Clases/Eliminar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Clases",
+        "Type": "ApiHBNS.Models.Clases",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.ClasesController",
+    "Method": "GuardarClase",
+    "RelativePath": "Clases/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Clases",
+        "Type": "ApiHBNS.Models.Clases",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.ClasesController",
+    "Method": "ObtenerClases",
+    "RelativePath": "Clases/Traer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.DiaSemanaController",
+    "Method": "ObtenerDiaSemana",
+    "RelativePath": "DiaSemana/Traer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.EstadoMembresiaController",
+    "Method": "GuardarEstadoMembresia",
+    "RelativePath": "EstadoMembresia/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EstadoMembresia",
+        "Type": "ApiHBNS.Models.EstadoMembresia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.EstadoMembresiaController",
+    "Method": "ObtenerEstadoMembresia",
+    "RelativePath": "EstadoMembresia/Traer/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.EstadoMembresiaController",
+    "Method": "ObtenerEstadoMembresia",
+    "RelativePath": "EstadoMembresia/TraerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.FuncionesController",
+    "Method": "ObtenerFunciones",
+    "RelativePath": "Funciones/ObtenerFunciones/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.HorariosController",
+    "Method": "ActualizarHorario",
+    "RelativePath": "Horarios/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Horarios",
+        "Type": "ApiHBNS.Models.Horarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.HorariosController",
+    "Method": "BorrarHorario",
+    "RelativePath": "Horarios/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Horarios",
+        "Type": "ApiHBNS.Models.Horarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.HorariosController",
+    "Method": "GuardarHorario",
+    "RelativePath": "Horarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Horarios",
+        "Type": "ApiHBNS.Models.Horarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.HorariosController",
+    "Method": "listarHorarios",
+    "RelativePath": "Horarios/Traer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.HorarioxclaseController",
+    "Method": "listarTipoUsuario",
+    "RelativePath": "Horariosxclase/TraerHorarios/{ID_clase}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_clase",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.LoginController",
+    "Method": "ListarLogin",
+    "RelativePath": "Login/Listar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "ApiHBNS.Models.Login",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.MembresiasController",
+    "Method": "ActualizarMembresia",
+    "RelativePath": "Membresias/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Membresias",
+        "Type": "ApiHBNS.Models.Membresias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.MembresiasController",
+    "Method": "BorrarHorario",
+    "RelativePath": "Membresias/Borrar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Membresias",
+        "Type": "ApiHBNS.Models.Membresias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.MembresiasController",
+    "Method": "GuardarHorario",
+    "RelativePath": "Membresias/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Membresias",
+        "Type": "ApiHBNS.Models.Membresias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.MembresiasController",
+    "Method": "listarHorarios",
+    "RelativePath": "Membresias/Traer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.QuejasSugerenciasController",
+    "Method": "GuardarQuejas",
+    "RelativePath": "QuejasSugerencias/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "QuejasSugerencias",
+        "Type": "ApiHBNS.Models.QuejasSugerencias",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.QuejasSugerenciasController",
+    "Method": "listarQuejas",
+    "RelativePath": "QuejasSugerencias/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.RolesController",
+    "Method": "GuardarQuejas",
+    "RelativePath": "Roles/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Roles",
+        "Type": "ApiHBNS.Models.Roles",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.RolesController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "Roles/Traer/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "YourProject.Controllers.FileUploadController",
+    "Method": "Upload",
+    "RelativePath": "SubirArchivos/Subir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.SueldosController",
+    "Method": "EditarSueldo",
+    "RelativePath": "Sueldos/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sueldos",
+        "Type": "ApiHBNS.Models.Sueldos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.SueldosController",
+    "Method": "GuardarSueldo",
+    "RelativePath": "Sueldos/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Sueldos",
+        "Type": "ApiHBNS.Models.Sueldos",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.SueldosController",
+    "Method": "ObtenerSueldos",
+    "RelativePath": "Sueldos/Traer/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.SueldosController",
+    "Method": "ObtenerSueldos",
+    "RelativePath": "Sueldos/TraerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.TipoUsuariosController",
+    "Method": "ActualizarTipoUsuario",
+    "RelativePath": "TipoUsuarios/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoUsuarios",
+        "Type": "ApiHBNS.Models.TipoUsuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.TipoUsuariosController",
+    "Method": "EliminarTipoUsuario",
+    "RelativePath": "TipoUsuarios/Eliminar",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoUsuarios",
+        "Type": "ApiHBNS.Models.TipoUsuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.TipoUsuariosController",
+    "Method": "GuardarTipoUsuario",
+    "RelativePath": "TipoUsuarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TipoUsuarios",
+        "Type": "ApiHBNS.Models.TipoUsuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.TipoUsuariosController",
+    "Method": "listarTipoUsuario",
+    "RelativePath": "TipoUsuarios/TraerTodos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.UsuariosController",
+    "Method": "ActualizarUsuario",
+    "RelativePath": "Usuarios/Actualizar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Usuarios",
+        "Type": "ApiHBNS.Models.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.UsuariosController",
+    "Method": "GuardarUsuario",
+    "RelativePath": "Usuarios/Guardar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Usuarios",
+        "Type": "ApiHBNS.Models.Usuarios",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.UsuariosController",
+    "Method": "ObtenerUsuarios",
+    "RelativePath": "Usuarios/Traer/{ID_usuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID_usuario",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiHBNS.Controllers.UsuariosController",
+    "Method": "ObtenerTodosUsuarios",
+    "RelativePath": "Usuarios/TraerTodosUsuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

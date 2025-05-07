@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "uo43Y/L8QVnRWhD3ZGTGr70alBtbDjQwfb61QbWgNMg=",
+  "Hash": "FoSTvqjIHpo8bIHmFiEAst1oGxJEEQv8ivUOtw54H3U=",
   "Source": "ApiHBNS",
   "BasePath": "_content/ApiHBNS",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
