@@ -10,10 +10,14 @@ $(document).ready(function() {
             var ID_usuario = usuario.ID_usuario;
             var Nombre = usuario.Nombre;
             var Apellido = usuario.Apellido;
+            const id = new URL(window.location.href).searchParams.get('id'); // Obtiene el valor del parámetro 'id'
 
-            $('#usuarios-traer').append(`
-                <button data-id="${ID_usuario}" class="boton-usuario">${Nombre} ${Apellido}</button>
-            `);    
+            if (ID_usuario != id){
+                $('#usuarios-traer').append(`
+                    <button data-id="${ID_usuario}" class="boton-usuario">${Nombre} ${Apellido}</button>
+                `);    
+            }
+            
         });
     }).fail(function (xhr, status, error) {
         alert("Hubo un problema al traer los usuarios: " + error + "\nStatus: " + status);
