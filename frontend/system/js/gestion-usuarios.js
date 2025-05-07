@@ -1,6 +1,7 @@
 $(document).ready(function() {
     traerUsuarios();
     traerTiposUsuario()
+    deshabilitarCamposUsuario();
     $('#boton-guardar').attr('disabled', true);
     $('#boton-modificacion').attr('disabled', true);
 

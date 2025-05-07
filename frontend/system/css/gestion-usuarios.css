@@ -27,7 +27,7 @@
     padding: 5px;
 }
 
-.datos-personales textarea, .datos-personales select  {
+.datos-personales textarea, .datos-personales select, .datos-personales input  {
     width: 300px;
     margin-bottom: 10px;
 }
